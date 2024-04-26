@@ -132,7 +132,7 @@ CREATE TABLE IF NOT EXISTS `customer_orders` (
   UNIQUE KEY `customer_orders_hex_id_unique` (`hex_id`),
   KEY `customer_id` (`customer_id`),
   CONSTRAINT `customer_orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table pbl4.customer_orders: ~18 rows (approximately)
 INSERT INTO `customer_orders` (`id`, `customer_id`, `hex_id`, `customer_name`, `recipient_name`, `phone_number`, `address`, `order_status`, `order_time`, `confirm_time`, `ship_time`, `completed_time`, `shipping_fee`, `created_at`, `updated_at`) VALUES
@@ -153,7 +153,9 @@ INSERT INTO `customer_orders` (`id`, `customer_id`, `hex_id`, `customer_name`, `
 	(16, 31, 'd98c308c8e19e911fdda', 'Mạnh Nguyễn Văn', 'Văn Mạnh', '01236000333', 'Thành phố Huế - Việt Nam', 1, '2022-12-21 02:57:30', '2022-12-21 19:12:03', '2022-12-21 19:12:13', '2022-12-21 19:12:23', 3000, '2022-12-20 12:57:30', '2022-12-21 05:12:23'),
 	(17, 25, '7aa6a20b0cf1edb1756c', 'Mai Thị Kim Khánh', 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', 1, '2022-12-21 18:50:26', NULL, NULL, NULL, 68030, '2022-12-21 04:50:26', '2022-12-21 04:50:26'),
 	(18, 31, '311c117b47de92aace49', 'Mạnh Nguyễn Văn', 'Văn Mạnh', '01236000333', 'Thành phố Huế - Việt Nam', 1, '2022-12-21 18:53:13', '2022-12-21 18:54:15', '2022-12-21 18:54:41', '2022-12-21 18:55:06', 17050900, '2022-12-21 04:53:13', '2022-12-21 04:55:06'),
-	(19, 31, '3de435ac548d4e303740', 'Mạnh Nguyễn Văn', 'Văn Mạnh', '01236000333', 'Thành phố Huế - Việt Nam', 1, '2022-12-24 13:04:34', NULL, NULL, NULL, 52030, '2022-12-23 23:04:34', '2022-12-23 23:04:34');
+	(19, 31, '3de435ac548d4e303740', 'Mạnh Nguyễn Văn', 'Văn Mạnh', '01236000333', 'Thành phố Huế - Việt Nam', 1, '2022-12-24 13:04:34', NULL, NULL, NULL, 52030, '2022-12-23 23:04:34', '2022-12-23 23:04:34'),
+	(20, 25, '8c67167250f011a47c9e', 'Mai Thị Kim Khánh', 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', 1, '2024-04-22 21:38:38', NULL, NULL, NULL, 25999, '2024-04-22 07:38:38', '2024-04-22 07:38:38'),
+	(21, 25, '6fb9e3a10d71f708ef2e', 'Mai Thị Kim Khánh', 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', 1, '2024-04-22 21:39:08', NULL, NULL, NULL, 25999, '2024-04-22 07:39:08', '2024-04-22 07:39:08');
 
 -- Dumping structure for table pbl4.failed_jobs
 CREATE TABLE IF NOT EXISTS `failed_jobs` (
@@ -331,7 +333,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Dumping data for table pbl4.migrations: ~15 rows (approximately)
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -349,7 +351,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(17, '2022_09_27_192258_create_import_details_table', 4),
 	(18, '2022_11_05_134009_create_customer_orders_table', 5),
 	(19, '2022_09_27_192306_create_shipping_addresses_table', 6),
-	(20, '2022_09_27_192329_create_order_details_table', 7);
+	(20, '2022_09_27_192329_create_order_details_table', 7),
+	(21, '2024_04_22_134854_create_user_datas_table', 8);
 
 -- Dumping structure for table pbl4.order_details
 CREATE TABLE IF NOT EXISTS `order_details` (
@@ -366,9 +369,9 @@ CREATE TABLE IF NOT EXISTS `order_details` (
   KEY `product_id` (`product_id`),
   CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`customer_order_id`) REFERENCES `customer_orders` (`id`),
   CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.order_details: ~50 rows (approximately)
+-- Dumping data for table pbl4.order_details: ~54 rows (approximately)
 INSERT INTO `order_details` (`id`, `customer_order_id`, `product_id`, `product_name`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
 	(1, 2, 1, 'Asus Gaming', 9, 25000000, '2022-12-14 11:51:25', '2022-12-14 11:51:25'),
 	(2, 2, 2, 'MacBook Air M1', 8, 30000000, '2022-12-14 11:51:25', '2022-12-14 11:51:25'),
@@ -419,7 +422,11 @@ INSERT INTO `order_details` (`id`, `customer_order_id`, `product_id`, `product_n
 	(47, 18, 2, 'MacBook Air M1', 1, 30000000, '2022-12-21 04:53:13', '2022-12-21 04:53:13'),
 	(48, 18, 71, 'Vinfast Lux A2.0', 1, 9999, '2022-12-21 04:53:13', '2022-12-21 04:53:13'),
 	(49, 19, 71, 'Vinfast Lux A2.0', 2, 9999, '2022-12-23 23:04:34', '2022-12-23 23:04:34'),
-	(50, 19, 64, 'USB 2T', 1, 500300, '2022-12-23 23:04:34', '2022-12-23 23:04:34');
+	(50, 19, 64, 'USB 2T', 1, 500300, '2022-12-23 23:04:34', '2022-12-23 23:04:34'),
+	(51, 20, 72, 'Tesla Model X 2022', 10, 19999, '2024-04-22 07:38:38', '2024-04-22 07:38:38'),
+	(52, 20, 63, 'Ốp lưng IP12', 2, 30000, '2024-04-22 07:38:38', '2024-04-22 07:38:38'),
+	(53, 21, 72, 'Tesla Model X 2022', 10, 19999, '2024-04-22 07:39:08', '2024-04-22 07:39:08'),
+	(54, 21, 63, 'Ốp lưng IP12', 2, 30000, '2024-04-22 07:39:08', '2024-04-22 07:39:08');
 
 -- Dumping structure for table pbl4.password_resets
 CREATE TABLE IF NOT EXISTS `password_resets` (
@@ -486,7 +493,7 @@ INSERT INTO `products` (`id`, `name`, `quantity`, `warranty_period`, `descriptio
 	(60, 'Sách DevUp', 79, '2022-12-10', 'Sách hay nhất của Người trong muôn nghề', 13, 90000.00, 'Bìa cứng', '20cm -  6cm', 'b6b938e5052d9b6d6c06', '2022-10-25 00:27:58', '2022-12-21 04:50:26'),
 	(61, 'Nhà Giả Kim', 15, '2022-12-30', 'Sách hay của tác giả Paulo Coelho', 13, 30000.00, 'Bìa cứng', '20cm - 6cm', 'eef751f4d5d65beb9f83', '2022-10-25 00:47:56', '2022-12-21 04:50:26'),
 	(62, 'Đắc Nhân Tâm', 0, '2023-02-10', 'Sách hay - Đắc nhân tâm', 13, 345000.00, 'Bìa cứng', '20cm - 6cm', 'a6167fbae577e26eeb60', '2022-10-25 00:51:43', '2022-10-25 00:51:43'),
-	(63, 'Ốp lưng IP12', 996, '2023-01-28', 'Ốp lưng màu đỏ dành cho điện thoại IPhone 12', 49, 30000.00, 'Ốp da', '12cm - 6cm', '9724895233d7d168774a', '2022-10-25 00:57:20', '2022-12-21 04:50:26'),
+	(63, 'Ốp lưng IP12', 992, '2023-01-28', 'Ốp lưng màu đỏ dành cho điện thoại IPhone 12', 49, 30000.00, 'Ốp da', '12cm - 6cm', '9724895233d7d168774a', '2022-10-25 00:57:20', '2024-04-22 07:39:08'),
 	(64, 'USB 2T', 198, '2022-12-25', 'Bộ nhớ , tốc độ đọc ghi siêu nhanh .', 50, 500300.00, 'Nhôm', '6cm - 4cm', 'bda1d26c51203943f113', '2022-10-25 01:05:09', '2022-12-23 23:04:34'),
 	(65, 'Sạc dự phòng Energizer 20.000mAh UE20012PQ', 0, '2024-11-22', 'Sạc dự phòng với 2 Đầu vào: Micro-USB, Đầu vào: Type C', 51, 900233.00, 'Nhôm', '10cm - 6cm', '2bbda9b780b75c226dd4', '2022-10-25 01:09:37', '2022-10-25 01:09:37'),
 	(66, 'Bàn văn phòng', 0, '2022-10-28', 'Bàn văn phòng giá tốt . Để máy tính siêu đẹp .', 30, 1000999.00, 'Gỗ lim', '2m - 0.5m . Khối lượng 10kg', '1514021ea4a864141a5e', '2022-10-25 01:17:49', '2022-10-25 01:17:49'),
@@ -495,7 +502,7 @@ INSERT INTO `products` (`id`, `name`, `quantity`, `warranty_period`, `descriptio
 	(69, 'Lót chuột pro :))', 0, '2022-12-29', 'Lót chuột làm từ chất liệu vip pro siêu cấp :)) mua đi', 12, 9999999.00, 'Vải tơ tằm', '20cm - 20cm', '30691e92869d0bb5f259', '2022-10-25 01:39:22', '2022-10-25 01:39:55'),
 	(70, 'USB 3.1 Type C', 0, '2022-10-21', 'Cổng chuyển đổi type C siêu bền', 12, 30999.00, 'Thép', '10cm - 2cm', 'd9103061ec5a246e97d2', '2022-10-25 01:52:50', '2022-10-25 01:52:50'),
 	(71, 'Vinfast Lux A2.0', 8, '2022-10-30', 'Sự kết hợp giữa dáng vẻ khỏe khoắn và cấu trúc hoàn hảo của ngoại thất tạo nên điểm nhấn sang trọng nhưng vẫn đầy tinh tế cho LUX A2.0, thổi làn gió mới vào thiết kế đặc hữu của dòng sedan thông thường.', 52, 9999.00, 'Thép', '4973 x 1900 x 1500 (mm)', 'bed4db5d0d16175a5e0c', '2022-10-28 06:24:18', '2022-12-23 23:04:34'),
-	(72, 'Tesla Model X 2022', 15, '2022-10-30', 'Tesla Model X là dòng xe SUV điện hạng sang cỡ trung (mid-size all-electric luxury SUV) của nhà sản xuất xe hơi Tesla, inc (Mỹ). Ra đời lần đầu năm 2015, đến nay Model x vẫn ở thế hệ thứ nhất. Model X được phát triển với nền tảng chiếc sedan Tesla Model S. Cả Model X và Model S đều đang được sản xuất tại Nhà máy Tesla ở Fremont, California.', 52, 19999.00, 'Thép', '5037x 1999x 1676 (mm)', 'a719422a35a053a8821d', '2022-10-28 06:28:25', '2022-12-21 04:50:26');
+	(72, 'Tesla Model X 2022', -5, '2022-10-30', 'Tesla Model X là dòng xe SUV điện hạng sang cỡ trung (mid-size all-electric luxury SUV) của nhà sản xuất xe hơi Tesla, inc (Mỹ). Ra đời lần đầu năm 2015, đến nay Model x vẫn ở thế hệ thứ nhất. Model X được phát triển với nền tảng chiếc sedan Tesla Model S. Cả Model X và Model S đều đang được sản xuất tại Nhà máy Tesla ở Fremont, California.', 52, 19999.00, 'Thép', '5037x 1999x 1676 (mm)', 'a719422a35a053a8821d', '2022-10-28 06:28:25', '2024-04-22 07:39:08');
 
 -- Dumping structure for table pbl4.providers
 CREATE TABLE IF NOT EXISTS `providers` (
@@ -598,6 +605,41 @@ INSERT INTO `users` (`id`, `fullname`, `email`, `username`, `email_verified_at`,
 	(35, 'sdvsdbdfbdfbdfb', 'dfbfdbfdbfdb@gmail.com', NULL, NULL, '$2y$10$9qpYKaO8/r4TZnXn9UwSG.ZC61l9mcpxKk6/BWaJqUytcSBbzkCfG', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 07:04:54', '2022-10-02 22:51:20'),
 	(36, 'Nguyễn Văn Mạnh', 'nguyevanmanhiotit1@gmail.com', NULL, NULL, '$2y$10$eU4KwTHRjuyqnNr0LbMdzun63RfrN7EEtXVv8Dkxyzi69zPSk/eqy', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-10-28 06:12:30', '2022-10-28 06:12:30'),
 	(37, 'Nguyễn Văn Mạnh', 'nguyenvanmanhiotit1@gmail.com', 'nguyevanmanhiotit1', NULL, '$2y$10$LKlZn48ds0cEKIuudBldYeBD1QaW.6sswHWPzB3o79TV9wKDf6eGW', 'Phú Vang - Thừa Thiên Huế - Việt Nam', '2001-08-29', 1, '0971404372', 'storage/images/Ju0rnVVaJK8bjORho2S3WjImCqHw3EUONuhC7mUp.jpg', 'super admin', NULL, '2022-10-28 06:13:05', '2022-12-29 00:12:16');
+
+-- Dumping structure for table pbl4.user_datas
+CREATE TABLE IF NOT EXISTS `user_datas` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `id_user` int NOT NULL,
+  `recent_care` json NOT NULL,
+  `recent_add` json NOT NULL,
+  `recent_buy` json NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1200 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- Dumping data for table pbl4.user_datas: ~20 rows (approximately)
+INSERT INTO `user_datas` (`id`, `id_user`, `recent_care`, `recent_add`, `recent_buy`, `created_at`, `updated_at`) VALUES
+	(1180, 2, '[56, 62, 63, 66, 71]', '[14, 55, 61, 67, 69]', '[1, 2]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1181, 3, '[2, 14, 55, 65, 72]', '[1, 60, 61, 63, 70]', '[13, 54]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1182, 4, '[54, 56, 59, 60, 69]', '[61, 65, 66, 67, 68]', '[14]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1183, 5, '[54, 55, 57, 58, 67]', '[13, 61, 62, 64, 69]', '[71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1184, 6, '[1, 13, 60, 69, 70]', '[2, 59, 62, 66, 68]', '[57]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1185, 7, '[13, 58, 62, 70, 72]', '[1, 14, 54, 55, 60]', '[57, 59, 61, 71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1186, 8, '[59, 64, 65, 66, 69]', '[54, 56, 57, 58, 62]', '[60, 61, 63, 71, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1187, 9, '[2, 54, 57, 59, 60]', '[61, 62, 67, 69, 71]', '[63, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1188, 10, '[14, 55, 58]', '[1, 62, 68, 69, 70]', '[57, 60, 61, 71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1189, 11, '[2, 56, 60, 69, 71]', '[14, 61, 64, 65, 66]', '[63, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1190, 12, '[1, 2, 13, 65, 67]', '[14, 54, 57, 70, 72]', '[71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1191, 13, '[13, 14, 57, 62, 63]', '[69, 71]', '[1, 2]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1192, 14, '[55, 58, 59, 65, 72]', '[67, 68, 69]', '[1, 2]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1193, 15, '[55, 60, 70, 71, 72]', '[14, 59, 65, 68, 69]', '[1, 2]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1194, 16, '[56, 58, 59, 62, 66]', '[14, 54, 60, 63, 69]', '[71, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1195, 17, '[54, 56, 58, 62, 67]', '[1, 13, 59, 65]', '[60, 61, 63, 64, 71, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1196, 18, '[59, 61, 63, 66, 67]', '[62, 68, 69, 70, 72]', '[1, 2, 13, 14, 54, 55, 56, 58, 71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1197, 19, '[54, 55, 63, 69, 70]', '[1, 59, 60, 66, 67]', '[64, 71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1198, 20, '[56, 58]', '[14, 60, 62, 67, 69]', '[63, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
+	(1199, 21, '[13, 54, 57, 59, 64]', '[2, 14, 55, 60, 71]', '[63, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
