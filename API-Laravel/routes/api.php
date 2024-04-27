@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CustomerAuthController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\UserDataController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController; 
@@ -221,4 +222,9 @@ Route::prefix('dashboard-admin')->controller(AdminDashboardController::class)->g
     Route::middleware('auth:admin_api')->group(function () {
         Route::get('dashboard', 'adminDashboard');
     });
+});
+
+// Recommend system 
+Route::prefix('recommend')->controller(UserDataController::class)->group(function () {
+    Route::get('product', 'recommendProduct');
 });
