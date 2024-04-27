@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, generics, status
 from .models import UserData
 from .serializers import UserDataSerializer
 from rest_framework.views import APIView
@@ -57,7 +57,10 @@ class RecommenderSystem(APIView):
             
             items = [t[1] for t in sorted_vec if t[1] not in bought[id_user]]
             
-            return Response(items[:min(6,len(items))])
+            data = {
+                'recommend_products': items[:min(6,len(items))],
+            }
+            return Response(data, status=status.HTTP_200_OK)
 
         else:
             return Response("need id_user")

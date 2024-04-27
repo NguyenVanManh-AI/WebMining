@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'shopAppRS.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'shopapp',
+        'NAME': 'pbl4',
         'USER':'root',
         'PASSWORD':'',
         'HOST':'localhost'
