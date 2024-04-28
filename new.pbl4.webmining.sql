@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.categories: ~42 rows (approximately)
+-- Dumping data for table pbl4.categories: ~10 rows (approximately)
 INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 	(3, 'Điện thoại', '2022-10-17 02:35:43', '2022-10-17 02:35:43'),
 	(5, 'Quần2', '2022-10-17 02:36:06', '2022-10-22 08:00:21'),
@@ -93,22 +93,22 @@ CREATE TABLE IF NOT EXISTS `customers` (
 
 -- Dumping data for table pbl4.customers: ~17 rows (approximately)
 INSERT INTO `customers` (`id`, `fullname`, `email`, `username`, `email_verified_at`, `password`, `address`, `date_of_birth`, `gender`, `status`, `phone`, `url_img`, `google_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(1, 'Nguyễn Văn Mạnh', 'buongtaynhenhang99@gmail.com', 'vanmanh1pro', NULL, '$2y$10$CXbgSIfR6kzIuqiR21uS0.5z9XkQVviQ.ETqKKdUEHMBAe2AK394S', 'Hà Nội - Việt Nam', '2001-09-29', 1, 1, '0971404379', 'storage/avatarcustomer/ocvWeE7s0QUoyyZnf9pBSUYMIVrpanE8TESL5tRE.jpg', '110656888206613286806', NULL, '2022-09-27 23:37:59', '2022-11-06 00:58:56'),
-	(2, 'Nguyễn Công CườngCường', 'congcuong999@gmail.com', 'congcuong999', NULL, '$2y$10$bd1l2ZAR9MiJD1XgFzq/5OqV4m2/IHHbQi0kkYNnVeoR1AFPVICbu', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-09-28 03:39:51', '2022-10-03 05:31:13'),
-	(4, 'Nguyễn Công CườngCường', 'congcuong999666@gmail.com', 'congcuong999666', NULL, '$2y$10$ZheqF7VaZ/2FRneHyKymmuijNZZf7CAbDtDf6QXPWB/O40Dp0f0bu', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 0, '0971404372', NULL, NULL, NULL, '2022-09-28 09:47:49', '2022-11-07 02:55:07'),
+	(1, 'Nguyễn Văn Mạnh', 'buongtaynhenhang99@gmail.com', 'vanmanh1pro', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt Nam', '2001-09-29', 1, 1, '0971404379', 'storage/avatarcustomer/ocvWeE7s0QUoyyZnf9pBSUYMIVrpanE8TESL5tRE.jpg', '110656888206613286806', NULL, '2022-09-27 23:37:59', '2022-11-06 00:58:56'),
+	(2, 'Nguyễn Công CườngCường', 'congcuong999@gmail.com', 'congcuong999', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-09-28 03:39:51', '2022-10-03 05:31:13'),
+	(4, 'Nguyễn Công CườngCường', 'congcuong999666@gmail.com', 'congcuong999666', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 0, '0971404372', NULL, NULL, NULL, '2022-09-28 09:47:49', '2022-11-07 02:55:07'),
 	(9, 'Nguyen Van Manh Pro', 'thanhxuantuoitre.sky2@gmail.com', 'gg_106115875168590721730', NULL, NULL, 'Hue City Viet Nam Pro', '2022-11-29', 1, 0, '0971404372', 'storage/avatarcustomer/lbMWvCDr4y4lp9kUDjuivdbv4uQp6DKZqI7b60Z1.jpg', '106115875168590721730', NULL, '2022-09-29 07:44:12', '2022-11-06 04:11:57'),
-	(10, 'Nguyen Van Hoang Phuc', 'hoangphuc999@gmail.com', 'hoangphuc', NULL, '$2y$10$iYYPaTlKBkEEHaoyxG.RiuskTHxVnmgBJnNWNsTRGJJWMD.YzLsPO', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-10-03 04:17:51', '2022-10-03 04:17:51'),
-	(11, 'Bùi Văn Nguyện', 'buivannguyen999@gmail.com', 'buivannguyen999', NULL, '$2y$10$05is4KoFU95PyArvvjgt9O.QCKiat0rc2PnymxghBsXxEvjT631r2', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-10-03 04:18:54', '2022-10-03 04:18:54'),
-	(12, 'Mai Thị Kim Khánh', 'kimkhanh999@gmail.com', 'kimkhanh999', NULL, '$2y$10$eGgeOKbxOiOOwsVyDiFkweCdozwEsN20IZuC87uJixdkD5NO1FWSe', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-10-03 04:20:00', '2022-10-15 02:01:24'),
-	(13, 'Mai Thị Kim Khánh2', 'kimkhanh9992@gmail.com', 'kimkhanh9992', NULL, '$2y$10$lj2ZAj1ZuvsNlSxA2of.iea/L.EDtcwy7vwx5Vk9.oe2nFpSIcS6e', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-10-03 04:33:53', '2022-10-03 04:33:53'),
-	(14, 'Nguyễn Thị Ngọc Mai', 'ngocmai123@gmail.com', 'ntngocmai123', NULL, '$2y$10$7rG2N8nmd.f2cJSdcWbuXuzSH76yaglq5lGVReqoQ1uORntHaSBzW', 'Hue Viet Nam', '2006-01-01', 0, 1, '0971404372', NULL, NULL, NULL, '2022-11-03 10:55:03', '2022-11-03 10:55:03'),
-	(15, 'Mai Thị Kim Khánh3', 'kimkhanh99923@gmail.com', 'kimkhanh99923', NULL, '$2y$10$xbmi6I43e4SjuvrfAWou7.yJ9yL.aO6vkeGVpJScYe/baBtJssZhe', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-11-03 10:56:59', '2022-11-03 10:56:59'),
-	(20, 'Nguyen Van Manh', 'buongtaynhenhang991@gmail.com', 'buongtaynhenhang991', NULL, '$2y$10$ZDCOXfXzHQ2r06pJd3MJLuO1aPp65tKKtbOySTEQ610MKTjJ.OIUW', 'Hue Viet Nam', '2022-11-09', 1, 1, '0971404372', NULL, NULL, NULL, '2022-11-03 11:13:54', '2022-11-03 11:13:54'),
-	(21, 'Nguyen Van Manh', 'itmaster2908@gmail.com', 'itmaster2908', NULL, '$2y$10$K3C06RVdkA6E00nRGPx/iuY3UycxK352PEJhqJuFKZI/7nz9smSj2', 'Hue Viet Nam', '2022-11-25', 1, 1, '0971404372', 'storage/avatarcustomer/BFxpirHwG7n8BA2w9sSdZ4wLsSMP0szBo2s0dUQm.jpg', '104024253680798269103', NULL, '2022-11-03 23:57:39', '2022-11-06 04:32:58'),
-	(22, 'Mai Thị Kim Khánh Dethuong', 'kimkhanh99923dt@gmail.com', 'kimkhanh99923khanh99923dethuong', NULL, '$2y$10$l1QXgg5J6Ol3LxFmEQMaLeXYdaoPp3NlcNR6e.v.LOnfKD2nUoNKK', 'TP Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727379', NULL, NULL, NULL, '2022-11-05 08:09:40', '2022-11-05 08:09:40'),
-	(25, 'Mai Thị Kim Khánh', 'kimkhanhdth@gmail.com', 'kimkhanhdth', NULL, '$2y$10$rLrZo7PxrsLIbrT7Ov2jDeNCBy1Zl4VD/rQ6M1xxXPqgqrvCzTCYK', 'TP Ho Chi Minh - Viet Nam', '2001-09-28', 0, 1, '01236000123', 'storage/avatarcustomer/5Ua0h8PlorRwYtJmznRTJD80IzUt2Iau42iNCKDs.jpg', NULL, NULL, '2022-11-06 07:07:38', '2022-12-11 01:07:04'),
-	(26, 'Mạnh Nguyễn Văn', 'khoahocfullstack5@gmail.com', 'gg_110612781880691501207', NULL, '$2y$10$lLgc0uV8pN4co957nG/KZeD5o01tT3ggLnLMvvxi9BfwwtGL5ZC8S', NULL, NULL, NULL, 1, NULL, NULL, '110612781880691501207', NULL, '2022-11-06 11:29:56', '2022-11-06 12:17:09'),
-	(30, 'Mạnh Nguyễn Văn', 'khoahoc2fullstack5@gmail.com', 'gg_113818064700641091374', NULL, '$2y$10$oHlOD4ob.9NO4PbGkrdCSOJbZN98urOvgvQ2Bx6MWT7y60ufuUGtG', NULL, NULL, NULL, 1, NULL, NULL, '113818064700641091374', NULL, '2022-11-06 12:50:22', '2022-11-07 02:51:41'),
+	(10, 'Nguyen Van Hoang Phuc', 'hoangphuc999@gmail.com', 'hoangphuc', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-10-03 04:17:51', '2022-10-03 04:17:51'),
+	(11, 'Bùi Văn Nguyện', 'buivannguyen999@gmail.com', 'buivannguyen999', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-10-03 04:18:54', '2022-10-03 04:18:54'),
+	(12, 'Mai Thị Kim Khánh', 'kimkhanh999@gmail.com', 'kimkhanh999', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-10-03 04:20:00', '2022-10-15 02:01:24'),
+	(13, 'Mai Thị Kim Khánh2', 'kimkhanh9992@gmail.com', 'kimkhanh9992', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-10-03 04:33:53', '2022-10-03 04:33:53'),
+	(14, 'Nguyễn Thị Ngọc Mai', 'ngocmai123@gmail.com', 'ntngocmai123', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue Viet Nam', '2006-01-01', 0, 1, '0971404372', NULL, NULL, NULL, '2022-11-03 10:55:03', '2022-11-03 10:55:03'),
+	(15, 'Mai Thị Kim Khánh3', 'kimkhanh99923@gmail.com', 'kimkhanh99923', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-11-03 10:56:59', '2022-11-03 10:56:59'),
+	(20, 'Nguyen Van Manh', 'buongtaynhenhang991@gmail.com', 'buongtaynhenhang991', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue Viet Nam', '2022-11-09', 1, 1, '0971404372', NULL, NULL, NULL, '2022-11-03 11:13:54', '2022-11-03 11:13:54'),
+	(21, 'Nguyen Van Manh', 'itmaster2908@gmail.com', 'itmaster2908', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue Viet Nam', '2022-11-25', 1, 1, '0971404372', 'storage/avatarcustomer/BFxpirHwG7n8BA2w9sSdZ4wLsSMP0szBo2s0dUQm.jpg', '104024253680798269103', NULL, '2022-11-03 23:57:39', '2022-11-06 04:32:58'),
+	(22, 'Mai Thị Kim Khánh Dethuong', 'kimkhanh99923dt@gmail.com', 'kimkhanh99923khanh99923dethuong', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'TP Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727379', NULL, NULL, NULL, '2022-11-05 08:09:40', '2022-11-05 08:09:40'),
+	(25, 'Mai Thị Kim Khánh', 'kimkhanhdth@gmail.com', 'kimkhanhdth', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'TP Ho Chi Minh - Viet Nam', '2001-09-28', 0, 1, '01236000123', 'storage/avatarcustomer/5Ua0h8PlorRwYtJmznRTJD80IzUt2Iau42iNCKDs.jpg', NULL, NULL, '2022-11-06 07:07:38', '2024-04-28 01:51:38'),
+	(26, 'Mạnh Nguyễn Văn', 'khoahocfullstack5@gmail.com', 'gg_110612781880691501207', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, 1, NULL, NULL, '110612781880691501207', NULL, '2022-11-06 11:29:56', '2022-11-06 12:17:09'),
+	(30, 'Mạnh Nguyễn Văn', 'khoahoc2fullstack5@gmail.com', 'gg_113818064700641091374', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, 1, NULL, NULL, '113818064700641091374', NULL, '2022-11-06 12:50:22', '2022-11-07 02:51:41'),
 	(31, 'Mạnh Nguyễn Văn', 'nguyenvanmanh2001it1@gmail.com', 'gg_109722727162244891904', NULL, NULL, 'Thừa Thiên Huế - Việt Nam', '2001-08-29', 1, 1, '01236000333', 'storage/avatarcustomer/sKVlkGLjLGRXbXuTMjusOUQvaz8iZjrwIO9XmzZQ.jpg', '109722727162244891904', NULL, '2022-12-11 01:12:21', '2022-12-23 11:46:43');
 
 -- Dumping structure for table pbl4.customer_orders
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `customer_orders` (
   CONSTRAINT `customer_orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.customer_orders: ~18 rows (approximately)
+-- Dumping data for table pbl4.customer_orders: ~20 rows (approximately)
 INSERT INTO `customer_orders` (`id`, `customer_id`, `hex_id`, `customer_name`, `recipient_name`, `phone_number`, `address`, `order_status`, `order_time`, `confirm_time`, `ship_time`, `completed_time`, `shipping_fee`, `created_at`, `updated_at`) VALUES
 	(2, 25, 'deebd7e40b73bcdcda47', 'Mai Thị Kim Khánh', 'Nguyễn Văn Hoàng Phúc', '0702518919', 'Thành Phố Thái Bình Việt Nam', 0, '2022-12-15 01:51:25', NULL, NULL, NULL, 46500000, '2022-12-14 11:51:25', '2022-12-20 10:55:18'),
 	(3, 25, '60efe8468cec7a3a3337', 'Mai Thị Kim Khánh', 'Nguyễn Văn Hoàng Phúc', '0702518919', 'Thành Phố Thái Bình Việt Nam', 1, '2022-12-15 02:04:11', '2022-12-21 15:48:35', '2022-12-21 15:48:47', '2022-12-21 15:49:01', 13099800, '2022-12-14 12:04:11', '2022-12-21 01:49:01'),
@@ -335,7 +335,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.migrations: ~15 rows (approximately)
+-- Dumping data for table pbl4.migrations: ~16 rows (approximately)
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2014_10_12_000000_create_users_table', 1),
 	(2, '2014_10_12_100000_create_password_resets_table', 1),
@@ -518,7 +518,7 @@ CREATE TABLE IF NOT EXISTS `providers` (
   UNIQUE KEY `providers_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.providers: ~22 rows (approximately)
+-- Dumping data for table pbl4.providers: ~0 rows (approximately)
 INSERT INTO `providers` (`id`, `name`, `email`, `address`, `phone`, `tax_id_number`, `created_at`, `updated_at`) VALUES
 	(1, 'VinFast', 'vinfast@gmail.com', 'Ho Chi Minh City', '0123456789', '0307030428931', '2022-10-19 22:53:41', '2022-10-23 02:04:40'),
 	(2, 'SunHouse', 'sunhouse@gmail.com', 'Ha Noi - Viet Nam', '022030123292', '0233303232122', '2022-10-19 22:54:52', '2022-10-19 22:54:52'),
@@ -588,23 +588,23 @@ CREATE TABLE IF NOT EXISTS `users` (
 
 -- Dumping data for table pbl4.users: ~17 rows (approximately)
 INSERT INTO `users` (`id`, `fullname`, `email`, `username`, `email_verified_at`, `password`, `address`, `date_of_birth`, `gender`, `phone`, `url_img`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(2, 'Nguyễn Công Cường', 'congcuong222@gmail.com', 'congcuong222', NULL, '$2y$10$AoJH9QoeH4XRSIFt5QXgUehVxAcCJ5xhovx8QlwICkdYQ7sxUIg9K', 'Tam Ky - Quang Nam - Viet Nam', '2022-09-06', 1, '0123456789', 'storage/images/T2fPnOwVPWVyWmPuQ8X2OuYoKEN47nq0gHnXo5yH.jpg', 'super admin', NULL, '2022-09-27 22:28:01', '2022-09-30 11:00:26'),
-	(6, 'Nguyễn Thị Mỹ An', 'myandethuong@gmail.com', NULL, NULL, '$2y$10$TmMqGXAydua9nxGM84IW/u3Vsx4JtHiifOQF.uTV3hnT8u2uA6v02', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-09-30 12:01:15', '2022-09-30 12:09:19'),
-	(7, 'Trần Thị Thùy Dương', 'thuyduongcute@gmail.com', 'hithuyduong', NULL, '$2y$10$RJC.p3ZIpNJfTtGtpyfa8uNk4.NR5BoFC.57or6cvWWCvrvGSEIia', 'Hue City - Viet Nam', '2022-10-19', 0, '0123544212', 'storage/images/50dj0eXQFbU2Havc4KPkF4S2W0lk8o68hNvD74XG.jpg', 'super admin', NULL, '2022-09-30 12:08:57', '2022-10-01 04:24:23'),
-	(8, 'ascasacas', 'vanmanascsacasch111@gmail.com', NULL, NULL, '$2y$10$pY6FFhgAzduaIjqaHWK1YuE.ipNQNs.EZLfz6pgt6ybWh.uupS09e', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:04:10', '2022-10-01 02:01:25'),
-	(11, 'ascsacascasc', 'vanmsacsacascanh111@gmail.com', NULL, NULL, '$2y$10$mDGrrF0vbSfOXR3leC6fLuh1TgQ5Sf78Fjnx22/uG5RRKJzJSt1nm', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:04:52', '2022-09-30 23:04:52'),
-	(12, 'acsacasc', 'vanascsacmanh111@gmail.com', NULL, NULL, '$2y$10$W40Rt5Y22NCyTLw3RlPLeePNKjoJ/S0/VOF9Kn8EZhUBsMSE1OWpi', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:44:39', '2022-10-02 22:51:06'),
-	(19, 'Nguyễn Văn Hoàng Phúc', 'hoangphuc@gmail.com', NULL, NULL, '$2y$10$KJG5cltAQuoDWgRUu/q3b.oKZvPEqwWhKFYOTmsWDdN5pb9pPzvhK', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:34:27', '2022-10-01 05:34:27'),
-	(20, 'Hương Giang', 'huonggiang@gmail.com', NULL, NULL, '$2y$10$8MbbGu7wu205CUexQiwFsOoTcW23QPaXa7.0OhEaJWYWOzmTexb2a', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:36:56', '2022-10-01 05:36:56'),
-	(21, 'Trần Thanh Nguyên', 'thanhnguyen@gmail.com', NULL, NULL, '$2y$10$PF3GH9m/vAULyvAAVok5FuarT6FL.bGUmLTuVXwImk5wmfQCdJ1FW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:40:11', '2022-10-01 05:40:11'),
-	(30, 'FULLSTACK 55', 'khoahocfullstack5@gmail.com', NULL, NULL, '$2y$10$UrAxDjvqu5y0.a4kXvhZpuPmoqQ2Sc.vi5YYgBjKeb3ItSQxgUneO', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:49:48', '2022-10-02 22:51:09'),
-	(31, 'FULLSTACK 55', 'khoahocfullstack5555@gmail.com', NULL, NULL, '$2y$10$CHnYTqzxAf5z8qiecU2.uuk7zBCYgRxt0CdAp4HceXvHmVMCMZwu2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:50:00', '2022-10-02 22:51:34'),
-	(32, 'FULLSTACK 55', 'khoahocfullstack55556666@gmail.com', NULL, NULL, '$2y$10$9QJsymUwvUBQu1/98QkbOetTBX75U2LOubuKl114R4FNOnth5sQbC', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:50:18', '2022-10-02 22:51:37'),
-	(33, 'Nguyễn Văn Mạnh', 'nguyenvanmanh2001it1@gmail.com', 'nguyenvanmanh2001it1', NULL, '$2y$10$Fzsl6sVFq.NcJrQRsXztWOCFZEGnMp4AcpQeK0EejoYzY1D6OVhtO', 'Hue Viet Nam', '2001-08-29', 1, '0971404372', 'storage/images/cBk8M2DkXmcpTyA8cAJWr8zllt0VaCnXM5PbOlWA.jpg', 'super admin', NULL, '2022-10-01 06:51:37', '2022-12-02 18:42:13'),
-	(34, 'JOMA Tech', 'itmaster2908@gmail.com', 'jomatech99', NULL, '$2y$10$K2mH1tHzSONAaAXlfBWjku/3e78Cn9zyNYHt8rY.0ZGiPMFj50riq', 'USA', '2022-10-12', 1, '0928472632', 'storage/images/88ba41zgejIkVtF0uytAMdRPBpns8R40o4aYw9OC.jpg', 'super admin', NULL, '2022-10-01 07:04:29', '2022-10-02 22:51:46'),
-	(35, 'sdvsdbdfbdfbdfb', 'dfbfdbfdbfdb@gmail.com', NULL, NULL, '$2y$10$9qpYKaO8/r4TZnXn9UwSG.ZC61l9mcpxKk6/BWaJqUytcSBbzkCfG', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 07:04:54', '2022-10-02 22:51:20'),
-	(36, 'Nguyễn Văn Mạnh', 'nguyevanmanhiotit1@gmail.com', NULL, NULL, '$2y$10$eU4KwTHRjuyqnNr0LbMdzun63RfrN7EEtXVv8Dkxyzi69zPSk/eqy', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-10-28 06:12:30', '2022-10-28 06:12:30'),
-	(37, 'Nguyễn Văn Mạnh', 'nguyenvanmanhiotit1@gmail.com', 'nguyevanmanhiotit1', NULL, '$2y$10$LKlZn48ds0cEKIuudBldYeBD1QaW.6sswHWPzB3o79TV9wKDf6eGW', 'Phú Vang - Thừa Thiên Huế - Việt Nam', '2001-08-29', 1, '0971404372', 'storage/images/Ju0rnVVaJK8bjORho2S3WjImCqHw3EUONuhC7mUp.jpg', 'super admin', NULL, '2022-10-28 06:13:05', '2022-12-29 00:12:16');
+	(2, 'Nguyễn Công Cường', 'congcuong222@gmail.com', 'congcuong222', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Tam Ky - Quang Nam - Viet Nam', '2022-09-06', 1, '0123456789', 'storage/images/T2fPnOwVPWVyWmPuQ8X2OuYoKEN47nq0gHnXo5yH.jpg', 'super admin', NULL, '2022-09-27 22:28:01', '2022-09-30 11:00:26'),
+	(6, 'Nguyễn Thị Mỹ An', 'myandethuong@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-09-30 12:01:15', '2022-09-30 12:09:19'),
+	(7, 'Trần Thị Thùy Dương', 'thuyduongcute@gmail.com', 'hithuyduong', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue City - Viet Nam', '2022-10-19', 0, '0123544212', 'storage/images/50dj0eXQFbU2Havc4KPkF4S2W0lk8o68hNvD74XG.jpg', 'super admin', NULL, '2022-09-30 12:08:57', '2022-10-01 04:24:23'),
+	(8, 'ascasacas', 'vanmanascsacasch111@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:04:10', '2022-10-01 02:01:25'),
+	(11, 'ascsacascasc', 'vanmsacsacascanh111@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:04:52', '2022-09-30 23:04:52'),
+	(12, 'acsacasc', 'vanascsacmanh111@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:44:39', '2022-10-02 22:51:06'),
+	(19, 'Nguyễn Văn Hoàng Phúc', 'hoangphuc@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:34:27', '2022-10-01 05:34:27'),
+	(20, 'Hương Giang', 'huonggiang@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:36:56', '2022-10-01 05:36:56'),
+	(21, 'Trần Thanh Nguyên', 'thanhnguyen@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:40:11', '2022-10-01 05:40:11'),
+	(30, 'FULLSTACK 55', 'khoahocfullstack5@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:49:48', '2022-10-02 22:51:09'),
+	(31, 'FULLSTACK 55', 'khoahocfullstack5555@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:50:00', '2022-10-02 22:51:34'),
+	(32, 'FULLSTACK 55', 'khoahocfullstack55556666@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:50:18', '2022-10-02 22:51:37'),
+	(33, 'Nguyễn Văn Mạnh', 'nguyenvanmanh2001it1@gmail.com', 'nguyenvanmanh2001it1', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue Viet Nam', '2001-08-29', 1, '0971404372', 'storage/images/cBk8M2DkXmcpTyA8cAJWr8zllt0VaCnXM5PbOlWA.jpg', 'super admin', NULL, '2022-10-01 06:51:37', '2022-12-02 18:42:13'),
+	(34, 'JOMA Tech', 'itmaster2908@gmail.com', 'jomatech99', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'USA', '2022-10-12', 1, '0928472632', 'storage/images/88ba41zgejIkVtF0uytAMdRPBpns8R40o4aYw9OC.jpg', 'super admin', NULL, '2022-10-01 07:04:29', '2022-10-02 22:51:46'),
+	(35, 'sdvsdbdfbdfbdfb', 'dfbfdbfdbfdb@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 07:04:54', '2022-10-02 22:51:20'),
+	(36, 'Nguyễn Văn Mạnh', 'nguyevanmanhiotit1@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-10-28 06:12:30', '2022-10-28 06:12:30'),
+	(37, 'Nguyễn Văn Mạnh', 'nguyenvanmanhiotit1@gmail.com', 'nguyevanmanhiotit1', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Phú Vang - Thừa Thiên Huế - Việt Nam', '2001-08-29', 1, '0971404372', 'storage/images/Ju0rnVVaJK8bjORho2S3WjImCqHw3EUONuhC7mUp.jpg', 'super admin', NULL, '2022-10-28 06:13:05', '2022-12-29 00:12:16');
 
 -- Dumping structure for table pbl4.user_datas
 CREATE TABLE IF NOT EXISTS `user_datas` (
