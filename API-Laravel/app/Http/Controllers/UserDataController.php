@@ -94,7 +94,7 @@ class UserDataController extends Controller
     }
 
     public function cancelBuy($id_cancel) {
-        $customer_order = CustomerOrder::find($id_cancel)->first();
+        $customer_order = CustomerOrder::find($id_cancel);
         $idCustomerOrder = CustomerOrder::where('customer_id',$customer_order->customer_id)
             ->where('order_status',1)->pluck('id')->unique()->toArray();
         $idProductSuccess = OrderDetail::whereIn('customer_order_id', $idCustomerOrder)->pluck('product_id')->unique()->toArray();

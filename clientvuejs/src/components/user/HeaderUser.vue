@@ -104,6 +104,8 @@
 
 // import Notification from './Notification';
 import TypedText2 from "./../admin/typedtext/TypedText2.vue"
+import BaseRequest from '../../restful/user/core/BaseRequest';
+import config from '../../config.js'; /// +++
 
 export default {
     name: "HeaderUser",
@@ -152,7 +154,17 @@ export default {
     },
     mounted(){
 
+      this.user = JSON.parse(window.localStorage.getItem('user')); /// +++
+      if(this.user != null && this.user.url_img != null) this.url_img = config.API_URL +'/'+ this.user.url_img; /// +++
+
       // allcategory
+      BaseRequest.get('api/categorys/allcategory')
+        .then((data) => {
+            this.categoryss = data.category;
+        })
+        .catch((error) => {
+          console.log(error);
+        })
     },
     methods: {
       // header
