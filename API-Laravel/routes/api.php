@@ -226,5 +226,8 @@ Route::prefix('dashboard-admin')->controller(AdminDashboardController::class)->g
 
 // Recommend system 
 Route::prefix('recommend')->controller(UserDataController::class)->group(function () {
+    Route::post('tracking', 'userTracking');
     Route::get('product', 'recommendProduct');
+    // buy và delete buy thì code thêm vào ở server
+    // còn add và remove add thì phải code ở client 
 });

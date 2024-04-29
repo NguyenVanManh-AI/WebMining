@@ -196,7 +196,7 @@ export default {
                 emitEvent('eventUserError','Show Orders Failse !');
             })
         },
-        cancelOrder:function(){
+        cancelOrder:function(){ 
             const { emitEvent } = useEventBus();
             BaseRequest.get('api/admin-order/cancel?id_cancel='+this.id_cancel)
             .then( () =>{

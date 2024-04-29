@@ -27,7 +27,7 @@ use Carbon\Carbon;
 
 class CustomerOrderController extends Controller
 {
-    public function buyNow(Request $request){
+    public function buyNow(Request $request){ 
 
         // kiểm tra xem với id_user gửi lên có địa chỉ nhận hàng chưa , nếu chưa thì trả về false
 
@@ -73,6 +73,24 @@ class CustomerOrderController extends Controller
                 'quantity' => ($product_old->quantity - $product->buy_number),
             ]); 
         }
+
+        // Tracking 
+        $product_ids = [];
+        foreach($buy_now as $pr){
+            $product = (object)($pr);
+            $product_ids[] = $product->product_id;
+        }
+        $id_user = $request->id_user;
+        $action = "buy";
+        $request->merge([
+            'product_ids' => $product_ids,
+            'id_user' => $id_user,
+            'action' => $action
+        ]);
+
+        $userDataController = new UserDataController();
+        $userDataController->userTracking($request);
+        // Tracking 
 
         // gửi Mail thông báo order thành công 
         // nếu là mail không tồn tại thì cũng không sao , nó sẽ tiếp tục thực hiện câu lệnh return ở dưới 
@@ -139,6 +157,21 @@ class CustomerOrderController extends Controller
 
     }
 
+    /*
+    Tracking 
+        + Cả admin hủy và customer hủy điều chỉ có 1 cái là : 'order_status' => 0 
+        + Customer hủy thì tìm những cái customer_order có status = 1 thì mới tính (không cần xét đến = 0 dù đó là admin hủy hay customer hủy)
+
+        + Lấy ra những CustomerOrder của user mà có status = 1 
+            + Lấy ra những Product của những Customer order đó 
+            => có được idProductSuccess danh sách id product thành công 
+
+        + $idProductSuccess : thành công 
+        + $idProductCancel : hủy 
+        + $idProductRecentBuy : data hiện tại trong user_data table
+    Tracking  
+    */  
+
     public function cancelOrder(Request $request){
         $id = $request->id_cancel;
         $customer_order = CustomerOrder::find($id);
@@ -158,6 +191,11 @@ class CustomerOrderController extends Controller
         // sau đó gửi mail về cho user là đơn đã được user hủy thành công hoặc là bị admin hủy 
         $customer = Customer::find($request->id_customer); 
         Mail::to($customer->email)->send(new CancelOrder($customer_order->hex_id)); 
+
+        // tracking 
+        $userDataController = new UserDataController();
+        $userDataController->cancelBuy($request->id_cancel);
+        // tracking 
 
         return response()->json([
             'message' => 'Get cancel success !',

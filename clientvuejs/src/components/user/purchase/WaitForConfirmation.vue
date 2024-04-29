@@ -174,7 +174,7 @@ export default {
                 emitEvent('eventUserError','Show Orders Failse !');
             })
         },
-        cancelOrder:function(){
+        cancelOrder:function(){ 
             const { emitEvent } = useEventBus();
             BaseRequest.get('api/customer-order/cancel?id_cancel='+this.id_cancel+'&id_customer='+this.user.id)
             .then( () =>{

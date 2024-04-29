@@ -128,6 +128,20 @@ export default {
       }
     },
     methods:{
+      updateTracking: function (action = "add", product_ids = []) {
+        let user = JSON.parse(window.localStorage.getItem('user'));
+        var data_tracking = {
+          action: action,
+          id_user: user.id,
+          product_ids: product_ids,
+        }
+        console.log(data_tracking);
+        BaseRequest.post('api/recommend/tracking', data_tracking)
+          .then((data) => {
+            console.log(data);
+          })
+          .catch(error => { console.log(error); })
+      },
       saveLocal:function(){
         window.localStorage.setItem('user_order',JSON.stringify(this.user_order));
         const { emitEvent } = useEventBus();
@@ -144,6 +158,16 @@ export default {
             }
           }
         }
+
+        // tracking 
+        let user_order = JSON.parse(window.localStorage.getItem('user_order'));
+        var trackingProductIds = [];
+        user_order.forEach(order => {
+          trackingProductIds.push(order.product_id);
+        })
+        this.updateTracking("add", trackingProductIds);
+        // tracking 
+
       },
       allStatus:function(mainStatus){
         for(var i=0;i<this.user_order.length;i++){
@@ -212,6 +236,7 @@ export default {
           id_user : this.user.id,
           totalPrice : this.totalPrice,
         }
+        console.log(buy_data);
 
         BaseRequest.post('api/customer-order/buy-now',buy_data)
         .then( () =>{

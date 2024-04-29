@@ -51,8 +51,8 @@ class AdminOrderController extends Controller
         ],201);
     }
 
-    // hủy đơn
-    public function cancelOrder(Request $request){
+    // hủy đơn . KHÔNG CẦN LÀM GÌ CẢ 
+    public function cancelOrder(Request $request){ 
         $id = $request->id_cancel;
         $customer_order = CustomerOrder::find($id);
         $customer_order->update([
