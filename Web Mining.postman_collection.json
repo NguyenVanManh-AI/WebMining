@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "5a6d2560-ed82-4e89-a6fe-fbfe0408b2a9",
+		"name": "Web Mining",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16738596",
+		"_collection_link": "https://api-test-fullstack-vn.postman.co/workspace/LINEBot~6c7d3726-b633-4731-ada8-822fea1a6b4d/collection/16738596-5a6d2560-ed82-4e89-a6fe-fbfe0408b2a9?action=share&source=collection_link&creator=16738596"
+	},
+	"item": [
+		{
+			"name": "Django",
+			"item": [
+				{
+					"name": "Laravel call Django",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/rs?id_user=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"rs"
+							],
+							"query": [
+								{
+									"key": "id_user",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Laravel",
+			"item": [
+				{
+					"name": "Client call Laravel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8089/api/recommend/product?id_user=22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"recommend",
+								"product"
+							],
+							"query": [
+								{
+									"key": "id_user",
+									"value": "22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update data tracking",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"action\": \"click\", // click , add , buy (click thì array chỉ có 1 phần tử)\r\n    \"id_user\": 10,\r\n    \"product_ids\": [63,64,72,14,55,58]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8089/api/recommend/tracking",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"recommend",
+								"tracking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buy Now",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODA4OVwvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE3MTQzNTkzNTksImV4cCI6MTcxNDM2Mjk1OSwibmJmIjoxNzE0MzU5MzU5LCJqdGkiOiJUaDJNWTB5QUlTZWZiUExIIiwic3ViIjoxMCwicHJ2IjoiMWQwYTAyMGFjZjVjNGI2YzQ5Nzk4OWRmMWFiZjBmYmQ0ZThjOGQ2MyJ9.i2cFJCI1zv1JdzT00hTHtnj-wbh-9-hHvUBKpdZYl18",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"buy_now\": [\r\n        {\r\n            \"product_id\": 71,\r\n            \"buy_number\": 2,\r\n            \"product_name\": \"Vinfast Lux A2.0\",\r\n            \"price\": 9999\r\n        },\r\n        {\r\n            \"product_id\": 72,\r\n            \"buy_number\": 2,\r\n            \"product_name\": \"Tesla Model X 2022\",\r\n            \"price\": 19999\r\n        }\r\n    ],\r\n    \"id_user\": 10,\r\n    \"totalPrice\": 59996\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/api/customer-order/buy-now",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"customer-order",
+								"buy-now"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"hoangphuc999@gmail.com\",\r\n    \"password\":\"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/api/customer/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"customer",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer Cancel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODA4OVwvYXBpXC9jdXN0b21lclwvbG9naW4iLCJpYXQiOjE3MTQzNjY4NjYsImV4cCI6MTcxNTU3NjQ2NiwibmJmIjoxNzE0MzY2ODY2LCJqdGkiOiJoTkdCSnZuc2wwUmd5SEVMIiwic3ViIjoxMCwicHJ2IjoiMWQwYTAyMGFjZjVjNGI2YzQ5Nzk4OWRmMWFiZjBmYmQ0ZThjOGQ2MyJ9.589cSOXzPkfMPE0FKa7nQp5t-o2gcH_va37WmoMf08k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_cancel\" : 22,\r\n    \"id_customer\" : 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8089/api/customer-order/cancel",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8089",
+							"path": [
+								"api",
+								"customer-order",
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
