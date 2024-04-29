@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.categories: ~24 rows (approximately)
+-- Dumping data for table pbl4.categories: ~42 rows (approximately)
 INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
 	(3, 'Điện thoại', '2022-10-17 02:35:43', '2022-10-17 02:35:43'),
 	(5, 'Quần2', '2022-10-17 02:36:06', '2022-10-22 08:00:21'),
@@ -93,23 +93,23 @@ CREATE TABLE IF NOT EXISTS `customers` (
 
 -- Dumping data for table pbl4.customers: ~17 rows (approximately)
 INSERT INTO `customers` (`id`, `fullname`, `email`, `username`, `email_verified_at`, `password`, `address`, `date_of_birth`, `gender`, `status`, `phone`, `url_img`, `google_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(1, 'Nguyễn Văn Mạnh', 'buongtaynhenhang99@gmail.com', 'vanmanh1pro', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt Nam', '2001-09-29', 1, 1, '0971404379', 'storage/avatarcustomer/ocvWeE7s0QUoyyZnf9pBSUYMIVrpanE8TESL5tRE.jpg', '110656888206613286806', NULL, '2022-09-27 23:37:59', '2022-11-06 00:58:56'),
-	(2, 'Nguyễn Công CườngCường', 'congcuong999@gmail.com', 'congcuong999', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-09-28 03:39:51', '2022-10-03 05:31:13'),
-	(4, 'Nguyễn Công CườngCường', 'congcuong999666@gmail.com', 'congcuong999666', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 0, '0971404372', NULL, NULL, NULL, '2022-09-28 09:47:49', '2022-11-07 02:55:07'),
-	(9, 'Nguyen Van Manh Pro', 'thanhxuantuoitre.sky2@gmail.com', 'gg_106115875168590721730', NULL, NULL, 'Hue City Viet Nam Pro', '2022-11-29', 1, 0, '0971404372', 'storage/avatarcustomer/lbMWvCDr4y4lp9kUDjuivdbv4uQp6DKZqI7b60Z1.jpg', '106115875168590721730', NULL, '2022-09-29 07:44:12', '2022-11-06 04:11:57'),
-	(10, 'Nguyen Van Hoang Phuc', 'hoangphuc999@gmail.com', 'hoangphuc', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-10-03 04:17:51', '2022-10-03 04:17:51'),
-	(11, 'Bùi Văn Nguyện', 'buivannguyen999@gmail.com', 'buivannguyen999', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-10-03 04:18:54', '2022-10-03 04:18:54'),
-	(12, 'Mai Thị Kim Khánh', 'kimkhanh999@gmail.com', 'kimkhanh999', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-10-03 04:20:00', '2022-10-15 02:01:24'),
-	(13, 'Mai Thị Kim Khánh2', 'kimkhanh9992@gmail.com', 'kimkhanh9992', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-10-03 04:33:53', '2022-10-03 04:33:53'),
-	(14, 'Nguyễn Thị Ngọc Mai', 'ngocmai123@gmail.com', 'ntngocmai123', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue Viet Nam', '2006-01-01', 0, 1, '0971404372', NULL, NULL, NULL, '2022-11-03 10:55:03', '2022-11-03 10:55:03'),
-	(15, 'Mai Thị Kim Khánh3', 'kimkhanh99923@gmail.com', 'kimkhanh99923', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-11-03 10:56:59', '2022-11-03 10:56:59'),
-	(20, 'Nguyen Van Manh', 'buongtaynhenhang991@gmail.com', 'buongtaynhenhang991', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue Viet Nam', '2022-11-09', 1, 1, '0971404372', NULL, NULL, NULL, '2022-11-03 11:13:54', '2022-11-03 11:13:54'),
-	(21, 'Nguyen Van Manh', 'itmaster2908@gmail.com', 'itmaster2908', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue Viet Nam', '2022-11-25', 1, 1, '0971404372', 'storage/avatarcustomer/BFxpirHwG7n8BA2w9sSdZ4wLsSMP0szBo2s0dUQm.jpg', '104024253680798269103', NULL, '2022-11-03 23:57:39', '2022-11-06 04:32:58'),
-	(22, 'Mai Thị Kim Khánh Dethuong', 'kimkhanh99923dt@gmail.com', 'kimkhanh99923khanh99923dethuong', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'TP Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727379', NULL, NULL, NULL, '2022-11-05 08:09:40', '2022-11-05 08:09:40'),
-	(25, 'Mai Thị Kim Khánh', 'kimkhanhdth@gmail.com', 'kimkhanhdth', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'TP Ho Chi Minh - Viet Nam', '2001-09-28', 0, 1, '01236000123', 'storage/avatarcustomer/5Ua0h8PlorRwYtJmznRTJD80IzUt2Iau42iNCKDs.jpg', NULL, NULL, '2022-11-06 07:07:38', '2024-04-28 01:51:38'),
-	(26, 'Mạnh Nguyễn Văn', 'khoahocfullstack5@gmail.com', 'gg_110612781880691501207', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, 1, NULL, NULL, '110612781880691501207', NULL, '2022-11-06 11:29:56', '2022-11-06 12:17:09'),
-	(30, 'Mạnh Nguyễn Văn', 'khoahoc2fullstack5@gmail.com', 'gg_113818064700641091374', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, 1, NULL, NULL, '113818064700641091374', NULL, '2022-11-06 12:50:22', '2022-11-07 02:51:41'),
-	(31, 'Mạnh Nguyễn Văn', 'nguyenvanmanh2001it1@gmail.com', 'gg_109722727162244891904', NULL, NULL, 'Thừa Thiên Huế - Việt Nam', '2001-08-29', 1, 1, '01236000333', 'storage/avatarcustomer/sKVlkGLjLGRXbXuTMjusOUQvaz8iZjrwIO9XmzZQ.jpg', '109722727162244891904', NULL, '2022-12-11 01:12:21', '2022-12-23 11:46:43');
+	(1, 'Nguyễn Văn Mạnh', 'buongtaynhenhang99@gmail.com', 'vanmanh1pro', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hà Nội - Việt Nam', '2001-09-29', 1, 1, '0971404379', 'storage/avatarcustomer/ocvWeE7s0QUoyyZnf9pBSUYMIVrpanE8TESL5tRE.jpg', '110656888206613286806', NULL, '2022-09-27 23:37:59', '2022-11-06 00:58:56'),
+	(2, 'Nguyễn Công CườngCường', 'congcuong999@gmail.com', 'congcuong999', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-09-28 03:39:51', '2022-10-03 05:31:13'),
+	(4, 'Nguyễn Công CườngCường', 'congcuong999666@gmail.com', 'congcuong999666', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-09-28 09:47:49', '2022-11-07 02:55:07'),
+	(9, 'Nguyen Van Manh Pro', 'thanhxuantuoitre.sky2@gmail.com', 'gg_106115875168590721730', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hue City Viet Nam Pro', '2022-11-29', 1, 1, '0971404372', 'storage/avatarcustomer/lbMWvCDr4y4lp9kUDjuivdbv4uQp6DKZqI7b60Z1.jpg', '106115875168590721730', NULL, '2022-09-29 07:44:12', '2022-11-06 04:11:57'),
+	(10, 'Nguyen Van Hoang Phuc', 'hoangphuc999@gmail.com', 'hoangphuc', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-10-03 04:17:51', '2022-10-03 04:17:51'),
+	(11, 'Bùi Văn Nguyện', 'buivannguyen999@gmail.com', 'buivannguyen999', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hà Nội - Việt NamNam', '2001-09-29', 1, 1, '0971404372', NULL, NULL, NULL, '2022-10-03 04:18:54', '2022-10-03 04:18:54'),
+	(12, 'Mai Thị Kim Khánh', 'kimkhanh999@gmail.com', 'kimkhanh999', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-10-03 04:20:00', '2022-10-15 02:01:24'),
+	(13, 'Mai Thị Kim Khánh2', 'kimkhanh9992@gmail.com', 'kimkhanh9992', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-10-03 04:33:53', '2022-10-03 04:33:53'),
+	(14, 'Nguyễn Thị Ngọc Mai', 'ngocmai123@gmail.com', 'ntngocmai123', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hue Viet Nam', '2006-01-01', 0, 1, '0971404372', NULL, NULL, NULL, '2022-11-03 10:55:03', '2022-11-03 10:55:03'),
+	(15, 'Mai Thị Kim Khánh3', 'kimkhanh99923@gmail.com', 'kimkhanh99923', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727372', NULL, NULL, NULL, '2022-11-03 10:56:59', '2022-11-03 10:56:59'),
+	(20, 'Nguyen Van Manh', 'buongtaynhenhang991@gmail.com', 'buongtaynhenhang991', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hue Viet Nam', '2022-11-09', 1, 1, '0971404372', NULL, NULL, NULL, '2022-11-03 11:13:54', '2022-11-03 11:13:54'),
+	(21, 'Nguyen Van Manh', 'itmaster2908@gmail.com', 'itmaster2908', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hue Viet Nam', '2022-11-25', 1, 1, '0971404372', 'storage/avatarcustomer/BFxpirHwG7n8BA2w9sSdZ4wLsSMP0szBo2s0dUQm.jpg', '104024253680798269103', NULL, '2022-11-03 23:57:39', '2022-11-06 04:32:58'),
+	(22, 'Mai Thị Kim Khánh Dethuong', 'kimkhanh99923dt@gmail.com', 'kimkhanh99923khanh99923dethuong', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'TP Hồ Chí Minh - Việt Nam', '2002-09-28', 0, 1, '01284727379', NULL, NULL, NULL, '2022-11-05 08:09:40', '2022-11-05 08:09:40'),
+	(25, 'Mai Thị Kim Khánh', 'kimkhanhdth@gmail.com', 'kimkhanhdth', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'TP Ho Chi Minh - Viet Nam', '2001-09-28', 0, 1, '01236000123', 'storage/avatarcustomer/5Ua0h8PlorRwYtJmznRTJD80IzUt2Iau42iNCKDs.jpg', NULL, NULL, '2022-11-06 07:07:38', '2024-04-28 21:15:40'),
+	(26, 'Mạnh Nguyễn Văn', 'khoahocfullstack5@gmail.com', 'gg_110612781880691501207', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, 1, NULL, NULL, '110612781880691501207', NULL, '2022-11-06 11:29:56', '2022-11-06 12:17:09'),
+	(30, 'Mạnh Nguyễn Văn', 'khoahoc2fullstack5@gmail.com', 'gg_113818064700641091374', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, 1, NULL, NULL, '113818064700641091374', NULL, '2022-11-06 12:50:22', '2022-11-07 02:51:41'),
+	(31, 'Mạnh Nguyễn Văn', 'nguyenvanmanh2001it1@gmail.com', 'gg_109722727162244891904', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Thừa Thiên Huế - Việt Nam', '2001-08-29', 1, 1, '01236000333', 'storage/avatarcustomer/sKVlkGLjLGRXbXuTMjusOUQvaz8iZjrwIO9XmzZQ.jpg', '109722727162244891904', NULL, '2022-12-11 01:12:21', '2022-12-23 11:46:43');
 
 -- Dumping structure for table pbl4.customer_orders
 CREATE TABLE IF NOT EXISTS `customer_orders` (
@@ -132,9 +132,9 @@ CREATE TABLE IF NOT EXISTS `customer_orders` (
   UNIQUE KEY `customer_orders_hex_id_unique` (`hex_id`),
   KEY `customer_id` (`customer_id`),
   CONSTRAINT `customer_orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.customer_orders: ~20 rows (approximately)
+-- Dumping data for table pbl4.customer_orders: ~32 rows (approximately)
 INSERT INTO `customer_orders` (`id`, `customer_id`, `hex_id`, `customer_name`, `recipient_name`, `phone_number`, `address`, `order_status`, `order_time`, `confirm_time`, `ship_time`, `completed_time`, `shipping_fee`, `created_at`, `updated_at`) VALUES
 	(2, 25, 'deebd7e40b73bcdcda47', 'Mai Thị Kim Khánh', 'Nguyễn Văn Hoàng Phúc', '0702518919', 'Thành Phố Thái Bình Việt Nam', 0, '2022-12-15 01:51:25', NULL, NULL, NULL, 46500000, '2022-12-14 11:51:25', '2022-12-20 10:55:18'),
 	(3, 25, '60efe8468cec7a3a3337', 'Mai Thị Kim Khánh', 'Nguyễn Văn Hoàng Phúc', '0702518919', 'Thành Phố Thái Bình Việt Nam', 1, '2022-12-15 02:04:11', '2022-12-21 15:48:35', '2022-12-21 15:48:47', '2022-12-21 15:49:01', 13099800, '2022-12-14 12:04:11', '2022-12-21 01:49:01'),
@@ -154,8 +154,20 @@ INSERT INTO `customer_orders` (`id`, `customer_id`, `hex_id`, `customer_name`, `
 	(17, 25, '7aa6a20b0cf1edb1756c', 'Mai Thị Kim Khánh', 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', 1, '2022-12-21 18:50:26', NULL, NULL, NULL, 68030, '2022-12-21 04:50:26', '2022-12-21 04:50:26'),
 	(18, 31, '311c117b47de92aace49', 'Mạnh Nguyễn Văn', 'Văn Mạnh', '01236000333', 'Thành phố Huế - Việt Nam', 1, '2022-12-21 18:53:13', '2022-12-21 18:54:15', '2022-12-21 18:54:41', '2022-12-21 18:55:06', 17050900, '2022-12-21 04:53:13', '2022-12-21 04:55:06'),
 	(19, 31, '3de435ac548d4e303740', 'Mạnh Nguyễn Văn', 'Văn Mạnh', '01236000333', 'Thành phố Huế - Việt Nam', 1, '2022-12-24 13:04:34', NULL, NULL, NULL, 52030, '2022-12-23 23:04:34', '2022-12-23 23:04:34'),
-	(20, 25, '8c67167250f011a47c9e', 'Mai Thị Kim Khánh', 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', 1, '2024-04-22 21:38:38', NULL, NULL, NULL, 25999, '2024-04-22 07:38:38', '2024-04-22 07:38:38'),
-	(21, 25, '6fb9e3a10d71f708ef2e', 'Mai Thị Kim Khánh', 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', 1, '2024-04-22 21:39:08', NULL, NULL, NULL, 25999, '2024-04-22 07:39:08', '2024-04-22 07:39:08');
+	(20, 25, 'a90c0d1f7f57f08b18ed', 'Mai Thị Kim Khánh', 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', 1, '2024-04-29 11:18:04', NULL, NULL, NULL, 8000, '2024-04-28 21:18:04', '2024-04-28 21:18:04'),
+	(21, 25, '8824c0ad339e8047e138', 'Mai Thị Kim Khánh', 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', 1, '2024-04-29 11:18:26', NULL, NULL, NULL, 96000, '2024-04-28 21:18:26', '2024-04-28 21:18:26'),
+	(22, 10, '220b57963a36013a7537', 'Nguyen Van Hoang Phuc', 'Nguyễn Văn Hoàng Phúc', '0123456999', 'Hội An - Việt Nam', 0, '2024-04-29 11:20:40', NULL, NULL, NULL, 219000, '2024-04-28 21:20:40', '2024-04-28 22:01:13'),
+	(23, 10, '9d53330f0a8a1d7dd7f2', 'Nguyen Van Hoang Phuc', 'Nguyễn Văn Hoàng Phúc', '0123456999', 'Hội An - Việt Nam', 1, '2024-04-29 11:21:14', NULL, NULL, NULL, 400044, '2024-04-28 21:21:14', '2024-04-28 21:21:14'),
+	(24, 1, '905148d3b535ec83ad4a', 'Nguyễn Văn Mạnh', 'Nguyễn Văn Mạnh', '01236123999', 'Phú Vang - TT Huế - Việt Nam', 1, '2024-04-29 11:22:45', NULL, NULL, NULL, 3905490, '2024-04-28 21:22:45', '2024-04-28 21:22:45'),
+	(25, 1, 'e003680645e78101e9cd', 'Nguyễn Văn Mạnh', 'Nguyễn Văn Mạnh', '01236123999', 'Phú Vang - TT Huế - Việt Nam', 1, '2024-04-29 11:23:36', NULL, NULL, NULL, 2360090, '2024-04-28 21:23:36', '2024-04-28 21:23:36'),
+	(26, 1, '430e3c3b9c005d1ae11c', 'Nguyễn Văn Mạnh', 'Nguyễn Văn Mạnh', '01236123999', 'Phú Vang - TT Huế - Việt Nam', 1, '2024-04-29 11:24:00', NULL, NULL, NULL, 2206020, '2024-04-28 21:24:00', '2024-04-28 21:24:00'),
+	(27, 2, '04cc1582b4578a5630a2', 'Nguyễn Công CườngCường', 'Nguyễn Công Cường', '012369999', 'Tam Kì - Việt Nam', 1, '2024-04-29 11:25:29', NULL, NULL, NULL, 5460070, '2024-04-28 21:25:29', '2024-04-28 21:25:29'),
+	(28, 2, '5be352c033bdc16f5477', 'Nguyễn Công CườngCường', 'Nguyễn Công Cường', '012369999', 'Tam Kì - Việt Nam', 1, '2024-04-29 11:25:56', NULL, NULL, NULL, 11800000, '2024-04-28 21:25:56', '2024-04-28 21:25:56'),
+	(29, 14, '73aa05b89c79f0f1209a', 'Nguyễn Thị Ngọc Mai', 'Nguyễn Thị Ngọc Mai', '012369969', 'Huế - Việt Nam', 1, '2024-04-29 11:27:19', NULL, NULL, NULL, 9708200, '2024-04-28 21:27:19', '2024-04-28 21:27:19'),
+	(30, 11, '458688cc5ee207b52596', 'Bùi Văn Nguyện', 'Bùi Văn Nguyện', '01236000339', 'Hà Nội - Việt Nam', 1, '2024-04-29 11:29:13', NULL, NULL, NULL, 13000100, '2024-04-28 21:29:13', '2024-04-28 21:29:13'),
+	(31, 9, '2ab7527fbcada0362973', 'Nguyen Van Manh Pro', 'Nguyen Van Manh Pro', '0971404372', 'Hue City Viet Nam', 1, '2024-04-29 11:30:53', NULL, NULL, NULL, 2399870, '2024-04-28 21:30:53', '2024-04-28 21:30:53'),
+	(32, 9, 'e62569cae08d5404acf9', 'Nguyen Van Manh Pro', 'Nguyen Van Manh Pro', '0971404372', 'Hue City Viet Nam', 1, '2024-04-29 11:31:11', NULL, NULL, NULL, 24000, '2024-04-28 21:31:11', '2024-04-28 21:31:11'),
+	(33, 31, '9a56043e1cfd71e698f1', 'Mạnh Nguyễn Văn', 'Văn Mạnh', '01236000333', 'Thành phố Huế - Việt Nam', 1, '2024-04-29 11:32:08', NULL, NULL, NULL, 293844, '2024-04-28 21:32:08', '2024-04-28 21:32:08');
 
 -- Dumping structure for table pbl4.failed_jobs
 CREATE TABLE IF NOT EXISTS `failed_jobs` (
@@ -369,9 +381,9 @@ CREATE TABLE IF NOT EXISTS `order_details` (
   KEY `product_id` (`product_id`),
   CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`customer_order_id`) REFERENCES `customer_orders` (`id`),
   CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.order_details: ~54 rows (approximately)
+-- Dumping data for table pbl4.order_details: ~88 rows (approximately)
 INSERT INTO `order_details` (`id`, `customer_order_id`, `product_id`, `product_name`, `quantity`, `price`, `created_at`, `updated_at`) VALUES
 	(1, 2, 1, 'Asus Gaming', 9, 25000000, '2022-12-14 11:51:25', '2022-12-14 11:51:25'),
 	(2, 2, 2, 'MacBook Air M1', 8, 30000000, '2022-12-14 11:51:25', '2022-12-14 11:51:25'),
@@ -423,10 +435,44 @@ INSERT INTO `order_details` (`id`, `customer_order_id`, `product_id`, `product_n
 	(48, 18, 71, 'Vinfast Lux A2.0', 1, 9999, '2022-12-21 04:53:13', '2022-12-21 04:53:13'),
 	(49, 19, 71, 'Vinfast Lux A2.0', 2, 9999, '2022-12-23 23:04:34', '2022-12-23 23:04:34'),
 	(50, 19, 64, 'USB 2T', 1, 500300, '2022-12-23 23:04:34', '2022-12-23 23:04:34'),
-	(51, 20, 72, 'Tesla Model X 2022', 10, 19999, '2024-04-22 07:38:38', '2024-04-22 07:38:38'),
-	(52, 20, 63, 'Ốp lưng IP12', 2, 30000, '2024-04-22 07:38:38', '2024-04-22 07:38:38'),
-	(53, 21, 72, 'Tesla Model X 2022', 10, 19999, '2024-04-22 07:39:08', '2024-04-22 07:39:08'),
-	(54, 21, 63, 'Ốp lưng IP12', 2, 30000, '2024-04-22 07:39:08', '2024-04-22 07:39:08');
+	(51, 20, 71, 'Vinfast Lux A2.0', 2, 9999, '2024-04-28 21:18:04', '2024-04-28 21:18:04'),
+	(52, 20, 61, 'Nhà Giả Kim', 2, 30000, '2024-04-28 21:18:04', '2024-04-28 21:18:04'),
+	(53, 21, 63, 'Ốp lưng IP12', 2, 30000, '2024-04-28 21:18:26', '2024-04-28 21:18:26'),
+	(54, 21, 59, 'Bàn phím cơ', 2, 450000, '2024-04-28 21:18:26', '2024-04-28 21:18:26'),
+	(55, 22, 57, 'Loa JPL', 2, 300000, '2024-04-28 21:20:40', '2024-04-28 21:20:40'),
+	(56, 22, 62, 'Đắc Nhân Tâm', 2, 345000, '2024-04-28 21:20:40', '2024-04-28 21:20:40'),
+	(57, 22, 59, 'Bàn phím cơ', 2, 450000, '2024-04-28 21:20:40', '2024-04-28 21:20:40'),
+	(58, 23, 54, 'Apple Watch', 2, 999222, '2024-04-28 21:21:14', '2024-04-28 21:21:14'),
+	(59, 23, 66, 'Bàn văn phòng', 2, 1001000, '2024-04-28 21:21:14', '2024-04-28 21:21:14'),
+	(60, 24, 67, 'Ghế văn phòng', 2, 560399, '2024-04-28 21:22:45', '2024-04-28 21:22:45'),
+	(61, 24, 62, 'Đắc Nhân Tâm', 3, 345000, '2024-04-28 21:22:45', '2024-04-28 21:22:45'),
+	(62, 24, 59, 'Bàn phím cơ', 2, 450000, '2024-04-28 21:22:45', '2024-04-28 21:22:45'),
+	(63, 24, 54, 'Apple Watch', 2, 999222, '2024-04-28 21:22:45', '2024-04-28 21:22:45'),
+	(64, 24, 68, 'Redmi Xiaomi', 2, 17000300, '2024-04-28 21:22:45', '2024-04-28 21:22:45'),
+	(65, 25, 65, 'Sạc dự phòng Energizer 20.000mAh UE20012PQ', 4, 900233, '2024-04-28 21:23:36', '2024-04-28 21:23:36'),
+	(66, 25, 14, 'Samsung Galaxy Z Flip', 2, 10000000, '2024-04-28 21:23:36', '2024-04-28 21:23:36'),
+	(67, 26, 58, 'Apple Airpods Pro 2', 2, 11000100, '2024-04-28 21:24:00', '2024-04-28 21:24:00'),
+	(68, 26, 61, 'Nhà Giả Kim', 2, 30000, '2024-04-28 21:24:00', '2024-04-28 21:24:00'),
+	(69, 27, 57, 'Loa JPL', 2, 300000, '2024-04-28 21:25:29', '2024-04-28 21:25:29'),
+	(70, 27, 68, 'Redmi Xiaomi', 2, 17000300, '2024-04-28 21:25:29', '2024-04-28 21:25:29'),
+	(71, 27, 69, 'Lót chuột pro :))', 2, 10000000, '2024-04-28 21:25:29', '2024-04-28 21:25:29'),
+	(72, 28, 55, 'Xiaomi MI 10T Pro', 2, 27000000, '2024-04-28 21:25:56', '2024-04-28 21:25:56'),
+	(73, 28, 13, 'Iphone 14', 2, 32000000, '2024-04-28 21:25:56', '2024-04-28 21:25:56'),
+	(74, 29, 71, 'Vinfast Lux A2.0', 2, 9999, '2024-04-28 21:27:19', '2024-04-28 21:27:19'),
+	(75, 29, 70, 'USB 3.1 Type C', 2, 30999, '2024-04-28 21:27:19', '2024-04-28 21:27:19'),
+	(76, 29, 56, 'Gaming GL66', 2, 23500000, '2024-04-28 21:27:19', '2024-04-28 21:27:19'),
+	(77, 29, 1, 'Asus Gaming', 2, 25000000, '2024-04-28 21:27:19', '2024-04-28 21:27:19'),
+	(78, 30, 58, 'Apple Airpods Pro 2', 2, 11000100, '2024-04-28 21:29:13', '2024-04-28 21:29:13'),
+	(79, 30, 56, 'Gaming GL66', 2, 23500000, '2024-04-28 21:29:13', '2024-04-28 21:29:13'),
+	(80, 30, 2, 'MacBook Air M1', 2, 30000000, '2024-04-28 21:29:13', '2024-04-28 21:29:13'),
+	(81, 30, 64, 'USB 2T', 2, 500300, '2024-04-28 21:29:13', '2024-04-28 21:29:13'),
+	(82, 31, 54, 'Apple Watch', 2, 999222, '2024-04-28 21:30:53', '2024-04-28 21:30:53'),
+	(83, 31, 58, 'Apple Airpods Pro 2', 2, 11000100, '2024-04-28 21:30:53', '2024-04-28 21:30:53'),
+	(84, 32, 60, 'Sách DevUp', 2, 90000, '2024-04-28 21:31:11', '2024-04-28 21:31:11'),
+	(85, 32, 63, 'Ốp lưng IP12', 2, 30000, '2024-04-28 21:31:11', '2024-04-28 21:31:11'),
+	(86, 33, 72, 'Tesla Model X 2022', 2, 19999, '2024-04-28 21:32:08', '2024-04-28 21:32:08'),
+	(87, 33, 59, 'Bàn phím cơ', 2, 450000, '2024-04-28 21:32:08', '2024-04-28 21:32:08'),
+	(88, 33, 54, 'Apple Watch', 2, 999222, '2024-04-28 21:32:08', '2024-04-28 21:32:08');
 
 -- Dumping structure for table pbl4.password_resets
 CREATE TABLE IF NOT EXISTS `password_resets` (
@@ -480,29 +526,29 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 -- Dumping data for table pbl4.products: ~23 rows (approximately)
 INSERT INTO `products` (`id`, `name`, `quantity`, `warranty_period`, `description`, `category_id`, `price`, `material`, `dimension`, `uri`, `created_at`, `updated_at`) VALUES
-	(1, 'Asus Gaming', 28, '2024-10-20', 'Laptop Asus cấu hình mạnh', 34, 25000000.00, 'thép', '14.1 x 9.1 x 0.8 inch', 'asdfghjkl1234567890', '2022-09-27 05:59:43', '2022-12-21 04:53:13'),
-	(2, 'MacBook Air M1', 457, '2024-10-02', 'Laptop Apple MacBook Air M1 2020 8GB/256GB/7-core GPU (MGN93SA/A) \nLaptop Apple MacBook Air M1 2020 thuộc dòng laptop cao cấp sang trọng có cấu hình mạnh mẽ, chinh phục được các tính năng văn phòng lẫn đồ hoạ mà bạn mong muốn, thời lượng pin dài, thiết kế mỏng nhẹ sẽ đáp ứng tốt các nhu cầu làm việc của bạn.', 34, 30000000.00, 'Nhôm', '16 x 10 x 0.8 inch229', 'zxcvbnm1234567890', '2022-10-24 02:18:49', '2022-12-21 04:53:13'),
-	(13, 'Iphone 14', 149, '2024-12-27', '- Thiết kế và chất liệu: Khung viền nhôm Aluminum, mặt lưng kính.\n\n- Màn hình: OLED 6.1 inch, Super Retina XDR, độ phân giải 2532 - x 1170 pixel, tần số quét 60 Hz.\n\n- Camera: Trước 12 MP. Sau 12 MP, 12 MP.\n\n- Hệ điều hành: IOS 16.\n\n- Chip CPU: Apple A15 Bionic\n\n- Bộ nhớ: 128 GB, 256 GB, 512 GB.\n\n- Kết nối: 5G, Wi-Fi, eSIM.\n\n- Pin, sạc: Sử dụng lên tới 20 giờ, sạc không dây MagSafe 15W, sạc không dây Qi lên đến 7,5W, sạc nhanh 20W.\n\n- Tiện ích: Camera TrueDepth nhận dạng khuôn mặt, hỗ trợ quay video với HDR Dolby Vision, chống nước và bụi chuẩn IP68,…', 3, 32000000.00, 'Khung viền nhôm Aluminum, mặt lưng kính.', '6.1 inch', 'c239c94e9d02a705b8ac', '2022-10-23 14:17:57', '2022-12-21 04:53:13'),
-	(14, 'Samsung Galaxy Z Flip', 67, '2024-10-26', 'Samsung Galaxy Z Flip là điện thoại thông minh có thể gập lại chạy trên nền tảng Android được phát triển, sản xuất và thương mại hóa bởi Samsung Electronics. Đây là mẫu máy điện thoại gập thứ hai của Samsung sau Galaxy Fold.', 3, 9999999.00, 'Phủ thủy tinh', '6,7 inch', 'c89e98596274b5268138', '2022-10-23 14:22:14', '2022-12-21 04:53:13'),
-	(54, 'Apple Watch', 679, '2022-10-27', 'Apple Watch Series 0 trang bị màn hình Retina OLED kích thước 1.65″, được bảo vệ bởi lớp kính cường lực Sapphire crystal glass chống trầy xước và chịu được những tác động mạnh. Mặt lưng của Series 0 có tích hợp cụm cảm biến để đo nhịp tim.', 45, 999222.00, 'Bản nhôm: Màu trắng, màu xám', '1.65″ Retina OLED', 'f780ba967d1d010a8a4a', '2022-10-24 20:55:53', '2022-12-21 04:53:13'),
-	(55, 'Xiaomi MI 10T Pro', 6479, '2025-10-07', 'Mi 10T Pro 5G mẫu smartphone cao cấp của Xiaomi trong năm 2020 cuối cùng cũng được trình làng với loạt những thông số gây “choáng ngợp”: Màn hình tần số quét 144 Hz, vi xử lý Snapdragon 865 và cụm camera khủng 108 MP kèm theo đó là một mức giá dễ chịu cho người dùng.', 3, 27000000.00, 'Thép', 'IPS LCD6.67"Full HD+', 'c8d1f7e65401decaca03', '2022-10-24 21:01:23', '2022-12-21 04:53:13'),
-	(56, 'Gaming GL66', 6684, '2022-11-05', 'Thông số kỹ thuật\nLoại CPU. Intel Core i7 11800H.\nLoại card đồ họa. Geforce RTX 3050Ti 4GB.\nDung lượng RAM. 16GB.\nLoại RAM. DDR4 16GB (2 x 8GB) 3200MHz; 2 khe, hỗ trợ tối đa 64GB.\nỔ cứng. 512GB SSD + 1 HDD 2.5\'\nKích thước màn hình. 15.6 inches.\nĐộ phân giải màn hình. 1080 x 1920 pixels (FullHD)\nCổng giao tiếp. 1x (4K @ 60Hz) HDMI.', 34, 23500000.00, 'Thép', '1080 x 1920 pixels (FullHD)', '58630fd8809728d8aa21', '2022-10-24 22:36:09', '2022-12-22 09:09:28'),
-	(57, 'Loa JPL', 27, '2022-10-20', 'JBL charge 3 là một sản phẩm độc quyền của thương hiệu JBL, có xuất xứ từ Mỹ. Đây là một thiết bị loa bluetooth từ khi ra mắt đã được rất nhiều người săn đón. Bởi lẽ, người ta yêu thích và lựa chọn dòng loa này là do sự dung hòa tuyệt đỉnh giữa chất lượng âm thanh, pin trâu và khả năng chống nước bền bỉ.', 46, 300000.00, 'Thép', '213 x 87 x 88,5 mm', '8406e6175cd5d31d8c49', '2022-10-24 22:40:16', '2022-12-20 02:38:59'),
-	(58, 'Apple Airpods Pro 2', 106, '2022-10-30', 'Airpods Pro 2 chính thức ra mắt người dùng vào  rạng sáng 8/9/2022 theo giờ Việt Nam tại sự kiện “Far Out”. Mẫu tai nghe Airpods Pro 2 với những cải tiến vô cùng mạnh mẽ từ vi xử lý mới, thời lượng pin lên đến 30 giờ và công nghệ Find My tích hợp cho khả năng tìm kiếm tai nghe dễ dàng hơn bao giờ hết.', 47, 11000110.00, 'Nhựa', 'Dài 3.09 cm – Rộng 2.18 cm – Cao 2.17 cm', 'beb6a5c2315d57b15cd6', '2022-10-24 22:45:17', '2022-12-21 04:53:13'),
-	(59, 'Bàn phím cơ', 65, '2022-12-09', 'Bàn phím cơ giá tốt', 48, 450000.00, 'Nhựa', '20cmx10cm', 'c80aa2615376a523f289', '2022-10-25 00:21:59', '2022-12-20 02:10:01'),
-	(60, 'Sách DevUp', 79, '2022-12-10', 'Sách hay nhất của Người trong muôn nghề', 13, 90000.00, 'Bìa cứng', '20cm -  6cm', 'b6b938e5052d9b6d6c06', '2022-10-25 00:27:58', '2022-12-21 04:50:26'),
-	(61, 'Nhà Giả Kim', 15, '2022-12-30', 'Sách hay của tác giả Paulo Coelho', 13, 30000.00, 'Bìa cứng', '20cm - 6cm', 'eef751f4d5d65beb9f83', '2022-10-25 00:47:56', '2022-12-21 04:50:26'),
-	(62, 'Đắc Nhân Tâm', 0, '2023-02-10', 'Sách hay - Đắc nhân tâm', 13, 345000.00, 'Bìa cứng', '20cm - 6cm', 'a6167fbae577e26eeb60', '2022-10-25 00:51:43', '2022-10-25 00:51:43'),
-	(63, 'Ốp lưng IP12', 992, '2023-01-28', 'Ốp lưng màu đỏ dành cho điện thoại IPhone 12', 49, 30000.00, 'Ốp da', '12cm - 6cm', '9724895233d7d168774a', '2022-10-25 00:57:20', '2024-04-22 07:39:08'),
-	(64, 'USB 2T', 198, '2022-12-25', 'Bộ nhớ , tốc độ đọc ghi siêu nhanh .', 50, 500300.00, 'Nhôm', '6cm - 4cm', 'bda1d26c51203943f113', '2022-10-25 01:05:09', '2022-12-23 23:04:34'),
-	(65, 'Sạc dự phòng Energizer 20.000mAh UE20012PQ', 27, '2024-11-22', 'Sạc dự phòng với 2 Đầu vào: Micro-USB, Đầu vào: Type C', 51, 900233.00, 'Nhôm', '10cm - 6cm', '2bbda9b780b75c226dd4', '2022-10-25 01:09:37', '2022-10-25 01:09:37'),
-	(66, 'Bàn văn phòng', 27, '2022-10-28', 'Bàn văn phòng giá tốt . Để máy tính siêu đẹp .', 30, 1000999.00, 'Gỗ lim', '2m - 0.5m . Khối lượng 10kg', '1514021ea4a864141a5e', '2022-10-25 01:17:49', '2022-10-25 01:17:49'),
-	(67, 'Ghế văn phòng', 27, '2023-02-04', 'Ghế văn phòng cao cấp . Chân sắt .', 30, 560399.00, 'Bọc vải - Khung sắt', '0.5m - 0.3m - 0.2m', 'e6c346ab60e7ab052bce', '2022-10-25 01:28:08', '2022-10-25 01:28:08'),
-	(68, 'Redmi Xiaomi', 27, '2022-10-28', 'Điện thoại mới nhất của Xiaomi\nCông nghệ màn hình	AMOLEDHDR10+\nTần số quét	120Hz\nĐộ sáng tối đa	1500 nits\nKích thước màn hình	6.81 inch\nĐộ phân giải	1440 x 3200', 3, 17000332.00, 'Nhựa', '6.81 inch', 'ee4f585df2d2007e95b5', '2022-10-25 01:36:49', '2022-10-25 01:36:49'),
-	(69, 'Lót chuột pro :))', 27, '2022-12-29', 'Lót chuột làm từ chất liệu vip pro siêu cấp :)) mua đi', 12, 9999999.00, 'Vải tơ tằm', '20cm - 20cm', '30691e92869d0bb5f259', '2022-10-25 01:39:22', '2022-10-25 01:39:55'),
-	(70, 'USB 3.1 Type C', 27, '2022-10-21', 'Cổng chuyển đổi type C siêu bền', 12, 30999.00, 'Thép', '10cm - 2cm', 'd9103061ec5a246e97d2', '2022-10-25 01:52:50', '2022-10-25 01:52:50'),
-	(71, 'Vinfast Lux A2.0', 27, '2022-10-30', 'Sự kết hợp giữa dáng vẻ khỏe khoắn và cấu trúc hoàn hảo của ngoại thất tạo nên điểm nhấn sang trọng nhưng vẫn đầy tinh tế cho LUX A2.0, thổi làn gió mới vào thiết kế đặc hữu của dòng sedan thông thường.', 52, 9999.00, 'Thép', '4973 x 1900 x 1500 (mm)', 'bed4db5d0d16175a5e0c', '2022-10-28 06:24:18', '2022-12-23 23:04:34'),
-	(72, 'Tesla Model X 2022', 198, '2022-10-30', 'Tesla Model X là dòng xe SUV điện hạng sang cỡ trung (mid-size all-electric luxury SUV) của nhà sản xuất xe hơi Tesla, inc (Mỹ). Ra đời lần đầu năm 2015, đến nay Model x vẫn ở thế hệ thứ nhất. Model X được phát triển với nền tảng chiếc sedan Tesla Model S. Cả Model X và Model S đều đang được sản xuất tại Nhà máy Tesla ở Fremont, California.', 52, 19999.00, 'Thép', '5037x 1999x 1676 (mm)', 'a719422a35a053a8821d', '2022-10-28 06:28:25', '2024-04-22 07:39:08');
+	(1, 'Asus Gaming', 77, '2024-10-20', 'Laptop Asus cấu hình mạnh', 34, 25000000.00, 'thép', '14.1 x 9.1 x 0.8 inch', 'asdfghjkl1234567890', '2022-09-27 05:59:43', '2024-04-28 21:27:19'),
+	(2, 'MacBook Air M1', 455, '2024-10-02', 'Laptop Apple MacBook Air M1 2020 8GB/256GB/7-core GPU (MGN93SA/A) \nLaptop Apple MacBook Air M1 2020 thuộc dòng laptop cao cấp sang trọng có cấu hình mạnh mẽ, chinh phục được các tính năng văn phòng lẫn đồ hoạ mà bạn mong muốn, thời lượng pin dài, thiết kế mỏng nhẹ sẽ đáp ứng tốt các nhu cầu làm việc của bạn.', 34, 30000000.00, 'Nhôm', '16 x 10 x 0.8 inch229', 'zxcvbnm1234567890', '2022-10-24 02:18:49', '2024-04-28 21:29:13'),
+	(13, 'Iphone 14', 147, '2024-12-27', '- Thiết kế và chất liệu: Khung viền nhôm Aluminum, mặt lưng kính.\n\n- Màn hình: OLED 6.1 inch, Super Retina XDR, độ phân giải 2532 - x 1170 pixel, tần số quét 60 Hz.\n\n- Camera: Trước 12 MP. Sau 12 MP, 12 MP.\n\n- Hệ điều hành: IOS 16.\n\n- Chip CPU: Apple A15 Bionic\n\n- Bộ nhớ: 128 GB, 256 GB, 512 GB.\n\n- Kết nối: 5G, Wi-Fi, eSIM.\n\n- Pin, sạc: Sử dụng lên tới 20 giờ, sạc không dây MagSafe 15W, sạc không dây Qi lên đến 7,5W, sạc nhanh 20W.\n\n- Tiện ích: Camera TrueDepth nhận dạng khuôn mặt, hỗ trợ quay video với HDR Dolby Vision, chống nước và bụi chuẩn IP68,…', 3, 32000000.00, 'Khung viền nhôm Aluminum, mặt lưng kính.', '6.1 inch', 'c239c94e9d02a705b8ac', '2022-10-23 14:17:57', '2024-04-28 21:25:56'),
+	(14, 'Samsung Galaxy Z Flip', 65, '2024-10-26', 'Samsung Galaxy Z Flip là điện thoại thông minh có thể gập lại chạy trên nền tảng Android được phát triển, sản xuất và thương mại hóa bởi Samsung Electronics. Đây là mẫu máy điện thoại gập thứ hai của Samsung sau Galaxy Fold.', 3, 9999999.00, 'Phủ thủy tinh', '6,7 inch', 'c89e98596274b5268138', '2022-10-23 14:22:14', '2024-04-28 21:23:36'),
+	(54, 'Apple Watch', 671, '2022-10-27', 'Apple Watch Series 0 trang bị màn hình Retina OLED kích thước 1.65″, được bảo vệ bởi lớp kính cường lực Sapphire crystal glass chống trầy xước và chịu được những tác động mạnh. Mặt lưng của Series 0 có tích hợp cụm cảm biến để đo nhịp tim.', 45, 999222.00, 'Bản nhôm: Màu trắng, màu xám', '1.65″ Retina OLED', 'f780ba967d1d010a8a4a', '2022-10-24 20:55:53', '2024-04-28 21:32:08'),
+	(55, 'Xiaomi MI 10T Pro', 6477, '2025-10-07', 'Mi 10T Pro 5G mẫu smartphone cao cấp của Xiaomi trong năm 2020 cuối cùng cũng được trình làng với loạt những thông số gây “choáng ngợp”: Màn hình tần số quét 144 Hz, vi xử lý Snapdragon 865 và cụm camera khủng 108 MP kèm theo đó là một mức giá dễ chịu cho người dùng.', 3, 27000000.00, 'Thép', 'IPS LCD6.67"Full HD+', 'c8d1f7e65401decaca03', '2022-10-24 21:01:23', '2024-04-28 21:25:56'),
+	(56, 'Gaming GL66', 6680, '2022-11-05', 'Thông số kỹ thuật\nLoại CPU. Intel Core i7 11800H.\nLoại card đồ họa. Geforce RTX 3050Ti 4GB.\nDung lượng RAM. 16GB.\nLoại RAM. DDR4 16GB (2 x 8GB) 3200MHz; 2 khe, hỗ trợ tối đa 64GB.\nỔ cứng. 512GB SSD + 1 HDD 2.5\'\nKích thước màn hình. 15.6 inches.\nĐộ phân giải màn hình. 1080 x 1920 pixels (FullHD)\nCổng giao tiếp. 1x (4K @ 60Hz) HDMI.', 34, 23500000.00, 'Thép', '1080 x 1920 pixels (FullHD)', '58630fd8809728d8aa21', '2022-10-24 22:36:09', '2024-04-28 21:29:13'),
+	(57, 'Loa JPL', 77, '2022-10-20', 'JBL charge 3 là một sản phẩm độc quyền của thương hiệu JBL, có xuất xứ từ Mỹ. Đây là một thiết bị loa bluetooth từ khi ra mắt đã được rất nhiều người săn đón. Bởi lẽ, người ta yêu thích và lựa chọn dòng loa này là do sự dung hòa tuyệt đỉnh giữa chất lượng âm thanh, pin trâu và khả năng chống nước bền bỉ.', 46, 300000.00, 'Thép', '213 x 87 x 88,5 mm', '8406e6175cd5d31d8c49', '2022-10-24 22:40:16', '2024-04-28 22:01:13'),
+	(58, 'Apple Airpods Pro 2', 100, '2022-10-30', 'Airpods Pro 2 chính thức ra mắt người dùng vào  rạng sáng 8/9/2022 theo giờ Việt Nam tại sự kiện “Far Out”. Mẫu tai nghe Airpods Pro 2 với những cải tiến vô cùng mạnh mẽ từ vi xử lý mới, thời lượng pin lên đến 30 giờ và công nghệ Find My tích hợp cho khả năng tìm kiếm tai nghe dễ dàng hơn bao giờ hết.', 47, 11000110.00, 'Nhựa', 'Dài 3.09 cm – Rộng 2.18 cm – Cao 2.17 cm', 'beb6a5c2315d57b15cd6', '2022-10-24 22:45:17', '2024-04-28 21:30:53'),
+	(59, 'Bàn phím cơ', 73, '2022-12-09', 'Bàn phím cơ giá tốt', 48, 450000.00, 'Nhựa', '20cmx10cm', 'c80aa2615376a523f289', '2022-10-25 00:21:59', '2024-04-28 22:01:13'),
+	(60, 'Sách DevUp', 77, '2022-12-10', 'Sách hay nhất của Người trong muôn nghề', 13, 90000.00, 'Bìa cứng', '20cm -  6cm', 'b6b938e5052d9b6d6c06', '2022-10-25 00:27:58', '2024-04-28 21:31:11'),
+	(61, 'Nhà Giả Kim', 11, '2022-12-30', 'Sách hay của tác giả Paulo Coelho', 13, 30000.00, 'Bìa cứng', '20cm - 6cm', 'eef751f4d5d65beb9f83', '2022-10-25 00:47:56', '2024-04-28 21:24:00'),
+	(62, 'Đắc Nhân Tâm', 993, '2023-02-10', 'Sách hay - Đắc nhân tâm', 13, 345000.00, 'Bìa cứng', '20cm - 6cm', 'a6167fbae577e26eeb60', '2022-10-25 00:51:43', '2024-04-28 22:01:13'),
+	(63, 'Ốp lưng IP12', 992, '2023-01-28', 'Ốp lưng màu đỏ dành cho điện thoại IPhone 12', 49, 30000.00, 'Ốp da', '12cm - 6cm', '9724895233d7d168774a', '2022-10-25 00:57:20', '2024-04-28 21:31:11'),
+	(64, 'USB 2T', 196, '2022-12-25', 'Bộ nhớ , tốc độ đọc ghi siêu nhanh .', 50, 500300.00, 'Nhôm', '6cm - 4cm', 'bda1d26c51203943f113', '2022-10-25 01:05:09', '2024-04-28 21:29:13'),
+	(65, 'Sạc dự phòng Energizer 20.000mAh UE20012PQ', 992, '2024-11-22', 'Sạc dự phòng với 2 Đầu vào: Micro-USB, Đầu vào: Type C', 51, 900233.00, 'Nhôm', '10cm - 6cm', '2bbda9b780b75c226dd4', '2022-10-25 01:09:37', '2024-04-28 21:23:36'),
+	(66, 'Bàn văn phòng', 994, '2022-10-28', 'Bàn văn phòng giá tốt . Để máy tính siêu đẹp .', 30, 1000999.00, 'Gỗ lim', '2m - 0.5m . Khối lượng 10kg', '1514021ea4a864141a5e', '2022-10-25 01:17:49', '2024-04-28 21:21:14'),
+	(67, 'Ghế văn phòng', 994, '2023-02-04', 'Ghế văn phòng cao cấp . Chân sắt .', 30, 560399.00, 'Bọc vải - Khung sắt', '0.5m - 0.3m - 0.2m', 'e6c346ab60e7ab052bce', '2022-10-25 01:28:08', '2024-04-28 21:22:45'),
+	(68, 'Redmi Xiaomi', 992, '2022-10-28', 'Điện thoại mới nhất của Xiaomi\nCông nghệ màn hình	AMOLEDHDR10+\nTần số quét	120Hz\nĐộ sáng tối đa	1500 nits\nKích thước màn hình	6.81 inch\nĐộ phân giải	1440 x 3200', 3, 17000332.00, 'Nhựa', '6.81 inch', 'ee4f585df2d2007e95b5', '2022-10-25 01:36:49', '2024-04-28 21:25:29'),
+	(69, 'Lót chuột pro :))', 994, '2022-12-29', 'Lót chuột làm từ chất liệu vip pro siêu cấp :)) mua đi', 12, 9999999.00, 'Vải tơ tằm', '20cm - 20cm', '30691e92869d0bb5f259', '2022-10-25 01:39:22', '2024-04-28 21:25:29'),
+	(70, 'USB 3.1 Type C', 994, '2022-10-21', 'Cổng chuyển đổi type C siêu bền', 12, 30999.00, 'Thép', '10cm - 2cm', 'd9103061ec5a246e97d2', '2022-10-25 01:52:50', '2024-04-28 21:27:19'),
+	(71, 'Vinfast Lux A2.0', 992, '2022-10-30', 'Sự kết hợp giữa dáng vẻ khỏe khoắn và cấu trúc hoàn hảo của ngoại thất tạo nên điểm nhấn sang trọng nhưng vẫn đầy tinh tế cho LUX A2.0, thổi làn gió mới vào thiết kế đặc hữu của dòng sedan thông thường.', 52, 9999.00, 'Thép', '4973 x 1900 x 1500 (mm)', 'bed4db5d0d16175a5e0c', '2022-10-28 06:24:18', '2024-04-28 21:27:19'),
+	(72, 'Tesla Model X 2022', 77, '2022-10-30', 'Tesla Model X là dòng xe SUV điện hạng sang cỡ trung (mid-size all-electric luxury SUV) của nhà sản xuất xe hơi Tesla, inc (Mỹ). Ra đời lần đầu năm 2015, đến nay Model x vẫn ở thế hệ thứ nhất. Model X được phát triển với nền tảng chiếc sedan Tesla Model S. Cả Model X và Model S đều đang được sản xuất tại Nhà máy Tesla ở Fremont, California.', 52, 19999.00, 'Thép', '5037x 1999x 1676 (mm)', 'a719422a35a053a8821d', '2022-10-28 06:28:25', '2024-04-28 21:32:08');
 
 -- Dumping structure for table pbl4.providers
 CREATE TABLE IF NOT EXISTS `providers` (
@@ -518,7 +564,7 @@ CREATE TABLE IF NOT EXISTS `providers` (
   UNIQUE KEY `providers_email_unique` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.providers: ~0 rows (approximately)
+-- Dumping data for table pbl4.providers: ~22 rows (approximately)
 INSERT INTO `providers` (`id`, `name`, `email`, `address`, `phone`, `tax_id_number`, `created_at`, `updated_at`) VALUES
 	(1, 'VinFast', 'vinfast@gmail.com', 'Ho Chi Minh City', '0123456789', '0307030428931', '2022-10-19 22:53:41', '2022-10-23 02:04:40'),
 	(2, 'SunHouse', 'sunhouse@gmail.com', 'Ha Noi - Viet Nam', '022030123292', '0233303232122', '2022-10-19 22:54:52', '2022-10-19 22:54:52'),
@@ -553,9 +599,9 @@ CREATE TABLE IF NOT EXISTS `shipping_addresses` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.shipping_addresses: ~7 rows (approximately)
+-- Dumping data for table pbl4.shipping_addresses: ~11 rows (approximately)
 INSERT INTO `shipping_addresses` (`id`, `customer_id`, `recipient_name`, `phone_number`, `address`, `created_at`, `updated_at`) VALUES
 	(1, 22, 'Mai Thị Kim Khánh Dethuong', '01284727379', 'TP Hồ Chí Minh - Việt Nam', '2022-11-05 08:09:40', '2022-11-05 08:09:40'),
 	(2, 9, 'Nguyen Van Manh Pro', '0971404372', 'Hue City Viet Nam', '2022-11-06 01:09:56', '2022-11-06 01:09:56'),
@@ -563,7 +609,11 @@ INSERT INTO `shipping_addresses` (`id`, `customer_id`, `recipient_name`, `phone_
 	(4, 25, 'Nguyễn Văn Mạnh', '0702518919', 'Thừa Thiên Huế - Việt Nam', '2022-11-06 07:07:38', '2022-12-20 07:32:28'),
 	(6, 26, 'Mạnh Pro VIP', '09059992999', 'New Your - USA', '2022-11-06 11:53:02', '2022-11-06 11:53:46'),
 	(7, 31, 'Văn Mạnh', '01236000333', 'Thành phố Huế - Việt Nam', '2022-12-14 12:30:08', '2022-12-14 12:30:08'),
-	(8, 10, 'Nguyễn Văn Hoàng Phúc', '0123456999', 'Hội An - Việt Nam', '2024-04-28 10:18:08', '2024-04-28 10:18:08');
+	(8, 10, 'Nguyễn Văn Hoàng Phúc', '0123456999', 'Hội An - Việt Nam', '2024-04-28 21:20:36', '2024-04-28 21:20:36'),
+	(9, 1, 'Nguyễn Văn Mạnh', '01236123999', 'Phú Vang - TT Huế - Việt Nam', '2024-04-28 21:22:01', '2024-04-28 21:22:01'),
+	(10, 2, 'Nguyễn Công Cường', '012369999', 'Tam Kì - Việt Nam', '2024-04-28 21:25:24', '2024-04-28 21:25:24'),
+	(11, 14, 'Nguyễn Thị Ngọc Mai', '012369969', 'Huế - Việt Nam', '2024-04-28 21:27:12', '2024-04-28 21:27:12'),
+	(12, 11, 'Bùi Văn Nguyện', '01236000339', 'Hà Nội - Việt Nam', '2024-04-28 21:29:09', '2024-04-28 21:29:09');
 
 -- Dumping structure for table pbl4.users
 CREATE TABLE IF NOT EXISTS `users` (
@@ -587,25 +637,25 @@ CREATE TABLE IF NOT EXISTS `users` (
   UNIQUE KEY `users_username_unique` (`username`)
 ) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.users: ~0 rows (approximately)
+-- Dumping data for table pbl4.users: ~17 rows (approximately)
 INSERT INTO `users` (`id`, `fullname`, `email`, `username`, `email_verified_at`, `password`, `address`, `date_of_birth`, `gender`, `phone`, `url_img`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(2, 'Nguyễn Công Cường', 'congcuong222@gmail.com', 'congcuong222', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Tam Ky - Quang Nam - Viet Nam', '2022-09-06', 1, '0123456789', 'storage/images/T2fPnOwVPWVyWmPuQ8X2OuYoKEN47nq0gHnXo5yH.jpg', 'super admin', NULL, '2022-09-27 22:28:01', '2022-09-30 11:00:26'),
-	(6, 'Nguyễn Thị Mỹ An', 'myandethuong@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-09-30 12:01:15', '2022-09-30 12:09:19'),
-	(7, 'Trần Thị Thùy Dương', 'thuyduongcute@gmail.com', 'hithuyduong', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue City - Viet Nam', '2022-10-19', 0, '0123544212', 'storage/images/50dj0eXQFbU2Havc4KPkF4S2W0lk8o68hNvD74XG.jpg', 'super admin', NULL, '2022-09-30 12:08:57', '2022-10-01 04:24:23'),
-	(8, 'ascasacas', 'vanmanascsacasch111@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:04:10', '2022-10-01 02:01:25'),
-	(11, 'ascsacascasc', 'vanmsacsacascanh111@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:04:52', '2022-09-30 23:04:52'),
-	(12, 'acsacasc', 'vanascsacmanh111@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:44:39', '2022-10-02 22:51:06'),
-	(19, 'Nguyễn Văn Hoàng Phúc', 'hoangphuc@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:34:27', '2022-10-01 05:34:27'),
-	(20, 'Hương Giang', 'huonggiang@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:36:56', '2022-10-01 05:36:56'),
-	(21, 'Trần Thanh Nguyên', 'thanhnguyen@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:40:11', '2022-10-01 05:40:11'),
-	(30, 'FULLSTACK 55', 'khoahocfullstack5@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:49:48', '2022-10-02 22:51:09'),
-	(31, 'FULLSTACK 55', 'khoahocfullstack5555@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:50:00', '2022-10-02 22:51:34'),
-	(32, 'FULLSTACK 55', 'khoahocfullstack55556666@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:50:18', '2022-10-02 22:51:37'),
-	(33, 'Nguyễn Văn Mạnh', 'nguyenvanmanh2001it1@gmail.com', 'nguyenvanmanh2001it1', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Hue Viet Nam', '2001-08-29', 1, '0971404372', 'storage/images/cBk8M2DkXmcpTyA8cAJWr8zllt0VaCnXM5PbOlWA.jpg', 'super admin', NULL, '2022-10-01 06:51:37', '2022-12-02 18:42:13'),
-	(34, 'JOMA Tech', 'itmaster2908@gmail.com', 'jomatech99', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'USA', '2022-10-12', 1, '0928472632', 'storage/images/88ba41zgejIkVtF0uytAMdRPBpns8R40o4aYw9OC.jpg', 'super admin', NULL, '2022-10-01 07:04:29', '2022-10-02 22:51:46'),
-	(35, 'sdvsdbdfbdfbdfb', 'dfbfdbfdbfdb@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 07:04:54', '2022-10-02 22:51:20'),
-	(36, 'Nguyễn Văn Mạnh', 'nguyevanmanhiotit1@gmail.com', NULL, NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-10-28 06:12:30', '2022-10-28 06:12:30'),
-	(37, 'Nguyễn Văn Mạnh', 'nguyenvanmanhiotit1@gmail.com', 'nguyevanmanhiotit1', NULL, '$2y$10$MwpCcFhBr23cDOIxu5ei5uWmGrzjRXx1NSRur/4F6g.srHxZNjYqW', 'Phú Vang - Thừa Thiên Huế - Việt Nam', '2001-08-29', 1, '0971404372', 'storage/images/Ju0rnVVaJK8bjORho2S3WjImCqHw3EUONuhC7mUp.jpg', 'super admin', NULL, '2022-10-28 06:13:05', '2022-12-29 00:12:16');
+	(2, 'Nguyễn Công Cường', 'congcuong222@gmail.com', 'congcuong222', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Tam Ky - Quang Nam - Viet Nam', '2022-09-06', 1, '0123456789', 'storage/images/T2fPnOwVPWVyWmPuQ8X2OuYoKEN47nq0gHnXo5yH.jpg', 'super admin', NULL, '2022-09-27 22:28:01', '2022-09-30 11:00:26'),
+	(6, 'Nguyễn Thị Mỹ An', 'myandethuong@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-09-30 12:01:15', '2022-09-30 12:09:19'),
+	(7, 'Trần Thị Thùy Dương', 'thuyduongcute@gmail.com', 'hithuyduong', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hue City - Viet Nam', '2022-10-19', 0, '0123544212', 'storage/images/50dj0eXQFbU2Havc4KPkF4S2W0lk8o68hNvD74XG.jpg', 'super admin', NULL, '2022-09-30 12:08:57', '2022-10-01 04:24:23'),
+	(8, 'ascasacas', 'vanmanascsacasch111@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:04:10', '2022-10-01 02:01:25'),
+	(11, 'ascsacascasc', 'vanmsacsacascanh111@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:04:52', '2022-09-30 23:04:52'),
+	(12, 'acsacasc', 'vanascsacmanh111@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-09-30 23:44:39', '2022-10-02 22:51:06'),
+	(19, 'Nguyễn Văn Hoàng Phúc', 'hoangphuc@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:34:27', '2022-10-01 05:34:27'),
+	(20, 'Hương Giang', 'huonggiang@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:36:56', '2022-10-01 05:36:56'),
+	(21, 'Trần Thanh Nguyên', 'thanhnguyen@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 05:40:11', '2022-10-01 05:40:11'),
+	(30, 'FULLSTACK 55', 'khoahocfullstack5@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:49:48', '2022-10-02 22:51:09'),
+	(31, 'FULLSTACK 55', 'khoahocfullstack5555@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:50:00', '2022-10-02 22:51:34'),
+	(32, 'FULLSTACK 55', 'khoahocfullstack55556666@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 06:50:18', '2022-10-02 22:51:37'),
+	(33, 'Nguyễn Văn Mạnh', 'nguyenvanmanh2001it1@gmail.com', 'nguyenvanmanh2001it1', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Hue Viet Nam', '2001-08-29', 1, '0971404372', 'storage/images/cBk8M2DkXmcpTyA8cAJWr8zllt0VaCnXM5PbOlWA.jpg', 'super admin', NULL, '2022-10-01 06:51:37', '2022-12-02 18:42:13'),
+	(34, 'JOMA Tech', 'itmaster2908@gmail.com', 'jomatech99', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'USA', '2022-10-12', 1, '0928472632', 'storage/images/88ba41zgejIkVtF0uytAMdRPBpns8R40o4aYw9OC.jpg', 'super admin', NULL, '2022-10-01 07:04:29', '2022-10-02 22:51:46'),
+	(35, 'sdvsdbdfbdfbdfb', 'dfbfdbfdbfdb@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'admin', NULL, '2022-10-01 07:04:54', '2022-10-02 22:51:20'),
+	(36, 'Nguyễn Văn Mạnh', 'nguyevanmanhiotit1@gmail.com', NULL, NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', NULL, NULL, NULL, NULL, NULL, 'super admin', NULL, '2022-10-28 06:12:30', '2022-10-28 06:12:30'),
+	(37, 'Nguyễn Văn Mạnh', 'nguyenvanmanhiotit1@gmail.com', 'nguyevanmanhiotit1', NULL, '$2y$10$E9iPuYFJ4Hr7USQFVGv3reyT/rzICcmwPvKCqHdm.Ecsnaze2WcW2', 'Phú Vang - Thừa Thiên Huế - Việt Nam', '2001-08-29', 1, '0971404372', 'storage/images/Ju0rnVVaJK8bjORho2S3WjImCqHw3EUONuhC7mUp.jpg', 'super admin', NULL, '2022-10-28 06:13:05', '2022-12-29 00:12:16');
 
 -- Dumping structure for table pbl4.user_datas
 CREATE TABLE IF NOT EXISTS `user_datas` (
@@ -617,30 +667,18 @@ CREATE TABLE IF NOT EXISTS `user_datas` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1200 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pbl4.user_datas: ~20 rows (approximately)
+-- Dumping data for table pbl4.user_datas: ~8 rows (approximately)
 INSERT INTO `user_datas` (`id`, `id_user`, `recent_care`, `recent_add`, `recent_buy`, `created_at`, `updated_at`) VALUES
-	(1180, 2, '[56, 62, 63, 66, 71]', '[]', '[1, 2]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1181, 3, '[2, 14, 55, 65, 72]', '[]', '[13, 54]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1182, 4, '[54, 56, 59, 60, 69]', '[]', '[14]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1183, 5, '[54, 55, 57, 58, 67]', '[]', '[71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1184, 6, '[1, 13, 60, 69, 70]', '[]', '[57]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1185, 7, '[13, 58, 62, 70, 72]', '[]', '[57, 59, 61, 71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1186, 8, '[59, 64, 65, 66, 69]', '[]', '[60, 61, 63, 71, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1187, 9, '[2, 54, 57, 59, 60]', '[]', '[63, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1188, 10, '[14, 55, 58]', '[]', '[57, 60, 61, 71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1189, 11, '[2, 56, 60, 69, 71]', '[]', '[63, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1190, 12, '[1, 2, 13, 65, 67]', '[]', '[71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1191, 13, '[13, 14, 57, 62, 63]', '[]', '[1, 2]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1192, 14, '[55, 58, 59, 65, 72]', '[]', '[1, 2]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1193, 15, '[55, 60, 70, 71, 72]', '[]', '[1, 2]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1194, 16, '[56, 58, 59, 62, 66]', '[]', '[71, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1195, 17, '[54, 56, 58, 62, 67]', '[]', '[60, 61, 63, 64, 71, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1196, 18, '[59, 61, 63, 66, 67]', '[]', '[1, 2, 13, 14, 54, 55, 56, 58, 71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1197, 19, '[54, 55, 63, 69, 70]', '[]', '[64, 71]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1198, 20, '[56, 58]', '[]', '[63, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43'),
-	(1199, 21, '[13, 54, 57, 59, 64]', '[]', '[63, 72]', '2024-04-22 09:25:43', '2024-04-22 09:25:43');
+	(17, 25, '[62, 55, 58, 68, 70]', '[]', '[1, 2, 13, 54, 57, 59, 60, 61, 63, 64, 71, 72]', '2024-04-28 21:52:14', '2024-04-28 22:01:18'),
+	(18, 31, '[65, 68]', '[]', '[1, 2, 13, 14, 54, 55, 56, 57, 58, 59, 64, 71, 72]', '2024-04-28 21:52:14', '2024-04-28 21:52:14'),
+	(19, 10, '[2, 14, 60, 61, 70]', '[]', '[54, 57, 59, 62, 66]', '2024-04-28 21:52:14', '2024-04-28 21:52:14'),
+	(20, 1, '[2, 56, 57, 69, 71]', '[]', '[14, 54, 58, 59, 61, 62, 65, 67, 68]', '2024-04-28 21:52:14', '2024-04-28 21:52:14'),
+	(21, 2, '[54, 56, 58, 65, 72]', '[]', '[13, 55, 57, 68, 69]', '2024-04-28 21:52:14', '2024-04-28 21:52:14'),
+	(22, 14, '[14, 60, 65, 67, 69]', '[]', '[1, 56, 70, 71]', '2024-04-28 21:52:14', '2024-04-28 21:52:14'),
+	(23, 11, '[54, 60, 67, 68, 69]', '[]', '[2, 56, 58, 64]', '2024-04-28 21:52:14', '2024-04-28 21:52:14'),
+	(24, 9, '[13, 55, 56, 66, 68]', '[]', '[54, 58, 60, 63]', '2024-04-28 21:52:14', '2024-04-28 21:52:14');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
