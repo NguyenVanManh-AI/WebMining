@@ -37,7 +37,7 @@
                         <div class="ifontawesome" id="name_product" role="alert"><i class="fa-brands fa-dropbox"></i>
                             {{ detailsProduct.product_name }}</div>
                         <div id="price" style="margin-top:10px">$ {{ new
-                            Intl.NumberFormat().format(detailsProduct.price)}}</div>
+                            Intl.NumberFormat().format(detailsProduct.price) }}</div>
                         <div class="row infor_product">
                             <div class="col-3">Dimension</div>
                             <div class="col-9">{{ detailsProduct.dimension }}</div>
@@ -93,7 +93,8 @@
                                 <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                                     aria-controls="collapseOne">Description</div>
                             </div>
-                            <div id="headingTwo" :class="{ 'top-border': topborder == false }" @click="topborder = false">
+                            <div id="headingTwo" :class="{ 'top-border': topborder == false }"
+                                @click="topborder = false">
                                 <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">Evaluate(0)</div>
                             </div>
@@ -116,16 +117,21 @@
                     </div>
                 </div>
                 <div id="recommend">
-                    <div id="label_recommend"><span><i class="fa-solid fa-circle-question"></i></span> List of suggested products, maybe it is suitable for you !</div>
+                    <div id="label_recommend"><span><i class="fa-solid fa-circle-question"></i></span> List of suggested
+                        products, maybe it is suitable for you !
+                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
+                            data-target="#tableSuggestionModal"><i class="fa-solid fa-circle-question"></i></button>
+                    </div>
                     <div id="list_product">
                         <div class="item_product" v-for="(product, index) in products" :key="index">
                             <div class="top_mini">
-                                <div :id="'carouselExampleControls' + index" class="carousel slide"
-                                    data-ride="carousel" v-if="product.images[0]">
+                                <div :id="'carouselExampleControls' + index" class="carousel slide" data-ride="carousel"
+                                    v-if="product.images[0]">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active imgproduct">
                                             <!-- nhằm đảm bảo luôn có ít nhất 1 ảnh để có slider nên có active cho cái đầu tiên -->
-                                            <img class="d-block w-100" :src="domain + '/' + product.images[0].image_path">
+                                            <img class="d-block w-100"
+                                                :src="domain + '/' + product.images[0].image_path">
                                         </div>
                                         <div class="carousel-item imgproduct" v-for="(img, index) in product.images"
                                             :key="index">
@@ -144,9 +150,53 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <div class="name_product_recommend" @click="viewDetail(product.uri, product.id)">{{ product.name }}</div>
-                                    <div class="price_product_recommend">$ {{new Intl.NumberFormat().format(product.price)}}</div>
+                                    <div class="name_product_recommend" @click="viewDetail(product.uri, product.id)">{{
+                                        product.name }}</div>
+                                    <div class="price_product_recommend">$ {{ new
+                                        Intl.NumberFormat().format(product.price) }}</div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="tableSuggestionModal" tabindex="-1" role="dialog"
+                    aria-labelledby="tableSuggestionModal" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title text-primary bold" id="tableSuggestionModal"><i class="fa-solid fa-stop"></i> Table suggested</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col" v-for="(item, index) in all_items_name" :key="index"><span
+                                                    class="text-success">#{{ this.all_items[index] }}</span> {{ item }}
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr v-for="(user, rowIndex) in all_users_name" :key="user">
+                                            <th scope="row"><span class="text-success">#{{ this.all_users[rowIndex]
+                                                    }}</span> {{ user }}</th>
+                                            <!-- <td v-for="(item, colIndex) in all_items_name" :key="item">{{
+                                                matrix[rowIndex][colIndex] }}</td> -->
+                                            <td v-for="(item, colIndex) in all_items_name" :key="item"
+                                                :class="{ 'text-danger': isTopSix(matrix[rowIndex], matrix[rowIndex][colIndex]) }">
+                                                {{ matrix[rowIndex][colIndex] }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p class="text-warning"><i class="fa-solid fa-circle-info"></i> Note: This table does not remove products that users have purchased</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -242,6 +292,11 @@ export default {
             },
             fixclick: 0,
             products: null,
+            matrix: null,
+            all_items: null,
+            all_items_name: null,
+            all_users: null,
+            all_users_name: null,
         }
     },
     mounted() {
@@ -266,6 +321,12 @@ export default {
             .then((data) => {
                 console.log(data);
                 this.products = data.products;
+                this.matrix = data.matrix;
+
+                this.all_items = data.all_items;
+                this.all_items_name = data.all_items_name;
+                this.all_users = data.all_users;
+                this.all_users_name = data.all_users_name;
             })
             .catch(error => {
                 console.log(error);
@@ -273,7 +334,7 @@ export default {
     },
 
     methods: {
-        viewDetail:function(uri, product_id){
+        viewDetail: function (uri, product_id) {
             let user = JSON.parse(window.localStorage.getItem('user'));
             var data_tracking = {
                 action: "click",
@@ -286,9 +347,9 @@ export default {
                     console.log(data);
                     window.location.href = window.location.origin + '/main/product/' + uri;
                 })
-                .catch(error => {console.log(error);})
+                .catch(error => { console.log(error); })
         },
-        updateTracking:function(action="add", product_ids=[]) {
+        updateTracking: function (action = "add", product_ids = []) {
             let user = JSON.parse(window.localStorage.getItem('user'));
             var data_tracking = {
                 action: action,
@@ -300,7 +361,7 @@ export default {
                 .then((data) => {
                     console.log(data);
                 })
-                .catch(error => {console.log(error);})
+                .catch(error => { console.log(error); })
         },
         addToCart: function () {
 
@@ -350,9 +411,17 @@ export default {
 
             const { emitEvent } = useEventBus();
             emitEvent('eventUserOrder');
-            
+
             return;
-        }
+        },
+        isTopSix(row, value) {
+            // Create a sorted copy of the row in descending order
+            let sortedRow = [...row].sort((a, b) => b - a);
+            // Get the 6th largest value (note: sortedRow[5] because array is 0-based)
+            let sixthLargest = sortedRow[5];
+            // If value is greater than or equal to the 6th largest value, return true
+            return value >= sixthLargest;
+        },
     },
     watch: {
 
@@ -361,6 +430,18 @@ export default {
 </script>
 
 <style scoped>
+.modal-open .modal {
+    background-color: #0000008a;
+}
+
+.modal-dialog {
+    max-width: 90vw;
+}
+
+#tableSuggestionModal table {
+    font-size: 10px;
+}
+
 /* recommend */
 #recommend {
     margin-top: 10px;
@@ -380,6 +461,7 @@ export default {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
 .name_product_recommend:hover {
     text-decoration: underline;
     cursor: pointer;
@@ -406,6 +488,7 @@ export default {
     font-size: 20px;
     color: green;
 }
+
 #label_recommend span {
     margin: 10px;
 }
@@ -417,8 +500,9 @@ export default {
     display: flex;
     justify-content: space-around;
 }
+
 #list_product::-webkit-scrollbar {
-    height: 15px; 
+    height: 15px;
     width: 15px;
 }
 

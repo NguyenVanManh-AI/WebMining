@@ -59,6 +59,9 @@ class RecommenderSystem(APIView):
             
             data = {
                 'recommend_products': items[:min(6,len(items))],
+                'matrix': np.round(a,2),
+                'all_items': all_items,
+                'all_users': all_users,
             }
             return Response(data, status=status.HTTP_200_OK)
 

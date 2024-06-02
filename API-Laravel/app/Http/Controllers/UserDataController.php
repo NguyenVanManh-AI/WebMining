@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\CustomerOrder;
 use App\Models\Product;
 use App\Models\Category;
@@ -25,6 +26,18 @@ class UserDataController extends Controller
         if ($response->successful()) {
             $data = $response->json();
             $products = $data['recommend_products'];
+
+            // matrix recommned 
+            $matrix = $data['matrix'];
+            $all_items = $data['all_items'];
+            $all_items_name = Product::whereIn('id', $all_items)->orderByRaw('FIELD(id, ' . implode(',', $all_items) . ')')
+            ->get()->pluck('name');
+
+            $all_users = $data['all_users'];
+            $all_users_name = Customer::whereIn('id', $all_users)->orderByRaw('FIELD(id, ' . implode(',', $all_users) . ')')
+                                ->get()->pluck('fullname'); // cách lấy ra fullname đúng với thứ tự mảng id 
+            // matrix recommned 
+
             $products = Product::join('categories', 'products.category_id', '=', 'categories.id')
             ->whereIn('products.id', $products)
             ->select('products.*', 'categories.name as name_category')
@@ -38,6 +51,11 @@ class UserDataController extends Controller
         return response()->json([
             'message' => 'Get a list of successful product suggestions !',
             'products' => $products,
+            'matrix' => $matrix,
+            'all_items' => $all_items,
+            'all_items_name' => $all_items_name,
+            'all_users' => $all_users,
+            'all_users_name' => $all_users_name,
         ], 201);
     }
     public function userTracking(Request $request){
